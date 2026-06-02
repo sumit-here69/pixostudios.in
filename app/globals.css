@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #FAFAF8;
+  --bg-surface: #FFFFFF;
+  --bg-muted: #F5F5F3;
+  --border: #E8E8E6;
+  --border-hover: #D4D4D2;
+  --text-primary: #1A1A1A;
+  --text-secondary: #6B6B6B;
+  --text-tertiary: #9B9B9B;
+  --accent: #2563EB;
+  --accent-hover: #1D4ED8;
+  --accent-light: #EFF6FF;
+  --success: #16A34A;
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--bg-surface);
+  --color-muted: var(--bg-muted);
+  --color-border: var(--border);
+  --color-border-hover: var(--border-hover);
+  --color-primary: var(--text-primary);
+  --color-secondary: var(--text-secondary);
+  --color-tertiary: var(--text-tertiary);
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+  --color-accent-light: var(--accent-light);
+  --color-success: var(--success);
+  --font-sans: var(--font-plus-jakarta);
+  --font-serif: var(--font-larken);
+}
+
+body {
+  background: var(--bg);
+  color: var(--text-primary);
+  font-family: var(--font-sans, 'Plus Jakarta Sans', system-ui, sans-serif);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.font-serif {
+  font-family: var(--font-serif, 'Larken', Georgia, 'Times New Roman', serif);
+}
+
+::selection {
+  background: var(--accent);
+  color: white;
+}
