@@ -1,11 +1,12 @@
 import Navbar from "@/components/landing/Navbar";
 import Hero from "@/components/landing/Hero";
-import SocialProof from "@/components/landing/SocialProof";
-import HowItWorks from "@/components/landing/HowItWorks";
-import Features from "@/components/landing/Features";
-import TemplateCategories from "@/components/landing/TemplateCategories";
-import Pricing from "@/components/landing/Pricing";
+import PortfolioShowcase from "@/components/landing/SocialProof";
 import Comparison from "@/components/landing/Comparison";
+import BentoGrid from "@/components/landing/BentoGrid";
+import Services from "@/components/landing/Services";
+import Portfolio from "@/components/landing/Portfolio";
+import HowItWorks from "@/components/landing/HowItWorks";
+import Pricing from "@/components/landing/Pricing";
 import Testimonials from "@/components/landing/Testimonials";
 import FAQ from "@/components/landing/FAQ";
 import CTABanner from "@/components/landing/CTABanner";
@@ -17,12 +18,13 @@ export default function Home() {
       <Navbar />
       <main>
         <Hero />
-        <SocialProof />
-        <HowItWorks />
-        <Features />
-        <TemplateCategories />
-        <Pricing />
+        <PortfolioShowcase />
         <Comparison />
+        <BentoGrid />
+        <Services />
+        <Portfolio />
+        <HowItWorks />
+        <Pricing />
         <Testimonials />
         <FAQ />
         <CTABanner />

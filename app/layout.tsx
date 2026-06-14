@@ -1,36 +1,38 @@
 import type { Metadata } from "next";
-import { Plus_Jakarta_Sans, Instrument_Serif } from "next/font/google";
-import SmoothScroll from "@/components/ui/SmoothScroll";
+import { DM_Sans, Instrument_Serif } from "next/font/google";
 import "./globals.css";
 
-const plusJakarta = Plus_Jakarta_Sans({
-  variable: "--font-plus-jakarta",
+const dmSans = DM_Sans({
+  variable: "--font-dm-sans",
   subsets: ["latin"],
   display: "swap",
+  weight: ["400", "500", "600", "700"],
 });
 
 const instrumentSerif = Instrument_Serif({
-  variable: "--font-larken",
+  variable: "--font-serif",
   subsets: ["latin"],
   weight: "400",
+  style: ["normal", "italic"],
   display: "swap",
 });
 
 export const metadata: Metadata = {
-  title: "SiteWallah — Your Business Deserves a Website",
+  title: "Pixo Studios — Premium Design & Development Studio",
   description:
-    "Get a professionally managed website for your business. Custom domain, hosting, and maintenance — all included from ₹999/month. Zero tech skills needed.",
+    "We design brands that move people. Premium websites, brand identities, and digital products for ambitious businesses. Based in India, working worldwide.",
   keywords: [
-    "website builder India",
-    "managed website service",
-    "SMB website",
-    "business website India",
-    "website subscription",
+    "design studio India",
+    "web design agency",
+    "brand identity design",
+    "UI UX design studio",
+    "website development India",
+    "premium design studio",
   ],
   openGraph: {
-    title: "SiteWallah — Your Business Deserves a Website",
+    title: "Pixo Studios — Premium Design & Development Studio",
     description:
-      "Professionally managed websites for Indian businesses. Custom domain, hosting, maintenance — from ₹999/month.",
+      "We design brands that move people. Premium websites, brand identities, and digital products for ambitious businesses.",
     type: "website",
   },
 };
@@ -41,9 +43,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${plusJakarta.variable} ${instrumentSerif.variable}`}>
+    <html lang="en" className={`${dmSans.variable} ${instrumentSerif.variable}`}>
       <body className="min-h-screen antialiased">
-        <SmoothScroll>{children}</SmoothScroll>
+        {children}
       </body>
     </html>
   );

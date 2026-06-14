@@ -1,210 +1,221 @@
-import {
-  Globe,
-  Shield,
-  Smartphone,
-  MessageCircle,
-  MapPin,
-  Search,
-  FileText,
-  BarChart3,
-  Server,
-  Headphones,
-  type LucideIcon,
-} from "lucide-react";
-
-export type Feature = { icon: LucideIcon; title: string; description: string; size: "lg" | "sm" };
-
-export const FEATURES: Feature[] = [
-  { icon: Globe, title: "Custom Domain", description: "Your business name as your website address — yourbusiness.com. No subdomains, no compromise.", size: "lg" },
-  { icon: Shield, title: "SSL Security", description: "HTTPS enabled by default. Your visitors' data is always protected.", size: "sm" },
-  { icon: Smartphone, title: "Mobile Responsive", description: "Looks perfect on every device — phone, tablet, or desktop.", size: "sm" },
-  { icon: MessageCircle, title: "WhatsApp Integration", description: "One-tap WhatsApp button so customers can reach you instantly. The #1 way Indian customers connect.", size: "lg" },
-  { icon: MapPin, title: "Google Maps", description: "Your location embedded on your website. Customers find you easily.", size: "sm" },
-  { icon: Search, title: "SEO Optimized", description: "Built to rank on Google. Show up when people search for your services.", size: "sm" },
-  { icon: FileText, title: "Contact Forms", description: "Capture leads automatically. Every inquiry goes straight to your phone.", size: "sm" },
-  { icon: BarChart3, title: "Monthly Analytics", description: "Know how many people visit, call, and contact you every month.", size: "sm" },
-  { icon: Server, title: "Managed Hosting", description: "We handle all the technical stuff. Your site is always fast and online.", size: "sm" },
-  { icon: Headphones, title: "Dedicated Support", description: "Real human support on WhatsApp. Not bots, not emails — real people.", size: "sm" },
-];
-
-export const CATEGORIES: { name: string; tagline: string; from: string; image: string }[] = [
-  { name: "Clinics & Doctors", tagline: "Book appointments online", from: "₹999", image: "/images/templates/clinic.png" },
-  { name: "Restaurants & Cafes", tagline: "Menus & reservations", from: "₹499", image: "/images/templates/restaurant.png" },
-  { name: "Coaching Centers", tagline: "Courses & admissions", from: "₹999", image: "/images/templates/coaching.png" },
-  { name: "Fashion & Clothing", tagline: "Shop the collection", from: "₹1,999", image: "/images/templates/fashion.png" },
-  { name: "Gym & Fitness", tagline: "Train with the best", from: "₹999", image: "/images/templates/fitness.png" },
-  { name: "Real Estate", tagline: "Browse properties", from: "₹999", image: "/images/templates/realestate.png" },
-  { name: "Lawyers & CA", tagline: "Professional services", from: "₹999", image: "/images/templates/legal.png" },
-  { name: "Events & Weddings", tagline: "Plan your occasion", from: "₹999", image: "/images/templates/events.png" },
-  { name: "Salons & Beauty", tagline: "Book your session", from: "₹499", image: "/images/templates/salon.png" },
-  { name: "E-Commerce & D2C", tagline: "Your online store", from: "₹1,999", image: "/images/templates/ecommerce.png" },
-];
-
-export type PricingTier = {
-  name: string;
-  price: number;
-  annualPrice: number;
-  description: string;
-  features: string[];
-  cta: string;
-  popular?: boolean;
-};
-
-export const PRICING: PricingTier[] = [
-  {
-    name: "Starter",
-    price: 499,
-    annualPrice: 4999,
-    description: "Perfect for local businesses that need a simple online presence.",
-    features: [
-      "1–3 page website",
-      "Custom domain (.com)",
-      "Mobile responsive",
-      "WhatsApp chat button",
-      "Google Maps embed",
-      "Contact form",
-      "Basic SEO setup",
-      "SSL certificate",
-    ],
-    cta: "Get Started",
-  },
-  {
-    name: "Professional",
-    price: 999,
-    annualPrice: 9999,
-    description: "For businesses that want to grow their online presence.",
-    features: [
-      "Up to 8 pages",
-      "Everything in Starter",
-      "Appointment booking",
-      "Photo & video gallery",
-      "Team profiles section",
-      "Testimonials & reviews",
-      "Blog / news section",
-      "Monthly analytics report",
-      "2 content updates/month",
-    ],
-    cta: "Get Started",
-    popular: true,
-  },
-  {
-    name: "Commerce",
-    price: 1999,
-    annualPrice: 19999,
-    description: "Full online store — products, payments, orders, everything.",
-    features: [
-      "Unlimited products",
-      "Everything in Professional",
-      "Shopping cart & checkout",
-      "Razorpay / UPI payments",
-      "Order & inventory management",
-      "Abandoned cart recovery",
-      "Customer accounts & reviews",
-      "GST invoice generation",
-      "Priority support",
-    ],
-    cta: "Launch Store",
-  },
-];
-
-export const COMPARISON = {
-  headers: ["", "SiteWallah", "Web Agency", "DIY Builders"],
-  rows: [
-    { label: "Monthly Cost", values: ["₹999/mo", "₹30,000+ one-time", "₹300–₹2,000/mo"] },
-    { label: "Setup by Client", values: ["None — we do it", "None — they do it", "You build it yourself"] },
-    { label: "Custom Domain", values: ["Included", "Extra cost", "Extra cost"] },
-    { label: "Ongoing Maintenance", values: ["Included", "₹5,000–₹10,000/year", "You manage it"] },
-    { label: "Support", values: ["WhatsApp — real humans", "Email (slow)", "Email / chatbot"] },
-    { label: "Site Updates", values: ["Included monthly", "₹500–₹2,000 per change", "Do it yourself"] },
-    { label: "Mobile Optimized", values: ["Always", "If they remember", "Depends on template"] },
-  ],
-};
-
-export const TESTIMONIALS = [
-  {
-    quote: "I was paying ₹35,000 to agencies every 2 years and my site was always outdated. Now for ₹999/month, it's always fresh and my patients book appointments directly.",
-    name: "Dr. Rakesh Sharma",
-    role: "Dental Clinic Owner",
-    city: "Jaipur",
-  },
-  {
-    quote: "Maine socha tha website banana bahut mushkil hoga. These guys did everything — domain, design, everything. I just pay monthly like rent. Super easy.",
-    name: "Priya Mehta",
-    role: "Boutique Owner",
-    city: "Indore",
-  },
-  {
-    quote: "My coaching center's admissions went up 40% after we got a proper website. Parents search online now — if you're not there, you don't exist.",
-    name: "Ankit Verma",
-    role: "IIT Coaching Center",
-    city: "Lucknow",
-  },
-];
-
-export const FAQ = [
-  {
-    q: "What exactly do I get for the monthly fee?",
-    a: "A fully designed and managed website on your own custom domain (like yourbusiness.com). This includes hosting, SSL security, maintenance, updates, and dedicated support. You don't need to worry about any technical stuff — we handle everything.",
-  },
-  {
-    q: "Do I need any technical knowledge?",
-    a: "Absolutely not. You tell us about your business, share your content (text, photos, logo), and we build everything. You never need to touch any code, server, or technical tool.",
-  },
-  {
-    q: "What's the setup fee for?",
-    a: "The one-time setup fee covers your domain name registration (yourbusiness.com) and the initial customization of your website with your content. Think of it as the 'security deposit' — you only pay it once.",
-  },
-  {
-    q: "Can I cancel anytime?",
-    a: "Yes. There are no long-term contracts. You can cancel your subscription anytime. If you're on a monthly plan, your site stays active until the end of the billing period.",
-  },
-  {
-    q: "How long does it take to get my website live?",
-    a: "For Starter and Professional plans: 2-3 business days. For E-Commerce plans: 5-7 business days. We work fast because your templates are pre-built — we just customize them with your content.",
-  },
-  {
-    q: "What if I already have a domain name?",
-    a: "Great! We can connect your existing domain to your new website. The setup fee will be reduced since we don't need to register a new domain for you.",
-  },
-  {
-    q: "How is this different from Wix or WordPress?",
-    a: "With Wix or WordPress, YOU have to build, design, and maintain your website yourself. With us, we do ALL of that for you. You just pay monthly and focus on your business. Think of it as hiring a web team for the price of your daily chai.",
-  },
-  {
-    q: "What about e-commerce? Can I sell products?",
-    a: "Yes! Our E-Commerce plans include full product catalog, shopping cart, Razorpay/UPI payment integration, order management, and even COD support. Everything you need to sell online.",
-  },
-  {
-    q: "Will my website work on mobile phones?",
-    a: "Every website we build is mobile-responsive by default. Over 80% of Indian internet users browse on mobile — your website will look perfect on every screen size.",
-  },
-  {
-    q: "Do you provide an email address with my domain?",
-    a: "Yes, we can set up a professional email (like info@yourbusiness.com) as part of your plan. Basic email forwarding is included free.",
-  },
-];
+export const STUDIO_NAME = "Pixo Studios";
+export const STUDIO_SHORT = "Pixo";
+export const STUDIO_EMAIL = "hello@pixostudios.in";
+export const STUDIO_PHONE = "+91 82221 68880";
+export const STUDIO_CAL = "https://cal.com/pixo-studios/30min";
+export const STUDIO_DOMAIN = "pixostudios.in";
 
 export const NAV_LINKS = [
-  { label: "Features", href: "#features" },
-  { label: "Templates", href: "#templates" },
-  { label: "Pricing", href: "#pricing" },
-  { label: "FAQ", href: "#faq" },
+  { label: "About us", href: "#about" },
+  { label: "Projects", href: "#projects" },
+  { label: "Services", href: "#services" },
+  { label: "Contact", href: "#contact" },
 ];
 
-export const STEPS = [
+export const SERVICES = [
+  {
+    title: "Branding & Identity",
+    description:
+      "From concept to prototype, we create user-centered interfaces that balance beauty with performance, ensuring every interaction feels effortless.",
+    tags: ["Identity", "Positioning", "Voice"],
+    icon: "/framer/rQNAGmYR2DGFWU2U3JkMB4Hys.svg",
+  },
+  {
+    title: "UI/UX Design",
+    description:
+      "Crafting intuitive, user-centered interfaces that blend clarity, beauty, and effortless interaction.",
+    tags: ["Web", "Product", "App"],
+    icon: "/framer/JCDk8i61Ec1N2laCFRxqdUPv0sM.svg",
+  },
+  {
+    title: "Web Development",
+    description:
+      "We build fast, scalable, and fully responsive websites that perform beautifully — whether it's a simple portfolio or a full digital platform.",
+    tags: ["Next.js", "React", "Framer"],
+    icon: "/framer/JCDk8i61Ec1N2laCFRxqdUPv0sM.svg",
+  },
+];
+
+export const PROJECTS = [
+  {
+    name: "Brew & Bean",
+    industry: "Food & Beverage",
+    scope: "Brand Identity + Website",
+    description:
+      "Complete digital identity for a specialty coffee brand — conversion-focused website with online ordering and brand-driven homepage.",
+    image: "/framer/FFHEfZV9GVwc9HziR2BNgXekq5g.jpg",
+    sideImage: "/framer/lNE1sUbqwHFCb5UOH9OnWTyekyE.jpg",
+  },
+  {
+    name: "VitalPath",
+    industry: "Health & Wellness",
+    scope: "Product Design + Development",
+    description:
+      "Patient portal with appointment booking, health records, and telehealth integration for a modern wellness platform.",
+    image: "/framer/CYC5VQ0ZcK8uEE5jBbm51FTJq0.jpg",
+    sideImage: "/framer/GrE60ZN8LxGjY61TLrDHi0y3iU.jpg",
+  },
+  {
+    name: "UrbanNest",
+    industry: "Real Estate",
+    scope: "Website Design + Brand Refresh",
+    description:
+      "Premium property listing platform with virtual tours and smart search, unified brand and service experience.",
+    image: "/framer/7G0MnVC3wxymrUw1Jtt6fPXRy30.jpg",
+    sideImage: "/framer/Gw2uTivgvCkhc4dSxTHmfxTLyYU.jpg",
+  },
+  {
+    name: "GlowLab",
+    industry: "Beauty & Skincare",
+    scope: "E-Commerce + Brand Identity",
+    description:
+      "D2C skincare brand with subscription model — elevated portfolio design to showcase craftsmanship with greater clarity and visual impact.",
+    image: "/framer/VJNWBeLoIV2o2VLFqAYQN34EDlE.jpg",
+    sideImage: "/framer/fQQPHGXKTYJhKBvphhxj1nBfFo.jpg",
+  },
+];
+
+export const PROCESS_STEPS = [
   {
     number: "01",
-    title: "Tell us about your business",
-    description: "Share your business details, photos, and what you want on your website. A quick WhatsApp call is all it takes.",
+    title: "Discovery",
+    description:
+      "We learn your business, audience, and goals. Strategy, positioning, research.",
+    tags: ["Research", "Strategy", "Positioning"],
   },
   {
     number: "02",
-    title: "We design & build your site",
-    description: "Our team picks the perfect template for your industry and customizes it with your branding and content.",
+    title: "Design",
+    description:
+      "Wireframes, mockups, and visual direction. You approve before we build.",
+    tags: ["UI/UX", "Visual Identity", "Mockups"],
   },
   {
     number: "03",
-    title: "Go live on your own domain",
-    description: "Your website goes live on yourbusiness.com. We handle hosting, security, and maintenance — you focus on your business.",
+    title: "Development",
+    description:
+      "Clean code, modern stack. Built for speed, SEO, and scale.",
+    tags: ["Next.js", "React", "Framer"],
+  },
+  {
+    number: "04",
+    title: "Launch & Support",
+    description:
+      "We deploy, monitor, and keep things running. 30 days free support included.",
+    tags: ["Deployment", "QA", "Maintenance"],
   },
 ];
+
+export const PRICING = [
+  {
+    tier: "Starter",
+    price: "₹25,000",
+    period: "/ project",
+    description:
+      "Perfect for startups and small teams launching their first project.",
+    features: [
+      "1 Landing Page Design",
+      "Basic Brand Guidelines",
+      "Mobile Responsive Layout",
+      "2 Revisions",
+      "Delivery in 7 days",
+    ],
+    cta: "Get started now",
+    popular: false,
+  },
+  {
+    tier: "Growth",
+    price: "₹75,000",
+    period: "/ project",
+    description:
+      "Best for growing brands looking to scale their digital presence.",
+    features: [
+      "Multi-page Website Design",
+      "Brand Strategy Session",
+      "Web Animations & Interactions",
+      "4 Revisions",
+      "Delivery in 14 days",
+    ],
+    cta: "Start your project",
+    popular: true,
+  },
+];
+
+export const TESTIMONIALS = [
+  {
+    quote:
+      "Working with this team was effortless that they understood our brand vision & turned it into a digital experience that truly represents who we are.",
+    name: "Olivia Carter",
+    role: "Brand Director",
+    avatar: "/framer/4RGuWhw5VjbAJbMonewftyJZ4c.jpg",
+  },
+  {
+    quote:
+      "They translated our ideas into a clean, modern digital presence that feels exactly right for our brand.",
+    name: "Ethan Miller",
+    role: "Director",
+    avatar: "/framer/54rgdyHlT5jTLB1jlx1W7jdkRbE.jpg",
+  },
+  {
+    quote:
+      "The team instantly understood our vision and delivered a seamless experience that exceeded every expectation.",
+    name: "Sophia Reyes",
+    role: "Creative Lead",
+    avatar: "/framer/5O8P63EQwkFO1m5OTR4jsw7hI8.jpg",
+  },
+];
+
+export const FAQ_DATA = [
+  {
+    q: "How long does a typical project take?",
+    a: "A landing page takes 5-7 days. Full websites take 2-3 weeks. Product development runs 4-8 weeks. We give you a realistic timeline upfront.",
+  },
+  {
+    q: "Do you work with startups or only large brands?",
+    a: "Both. We love early-stage startups who need to move fast and look premium from day one. We also work with established D2C brands looking to level up.",
+  },
+  {
+    q: "What's included in your design packages?",
+    a: "Every package includes custom design (no templates), mobile responsiveness, SEO optimization, and post-launch support. Check our pricing section for specifics.",
+  },
+  {
+    q: "Do you provide development too?",
+    a: "Yes. We handle everything — design, development, deployment. No need to hire separate teams. One studio, end-to-end delivery.",
+  },
+  {
+    q: "How do we start a project?",
+    a: "Book a free 15-minute call. We'll discuss your goals, timeline, and budget. If we're a fit, we send a proposal within 24 hours.",
+  },
+  {
+    q: "Can you help with ongoing updates after launch?",
+    a: "Every project includes 30 days of free support. For ongoing maintenance, we offer flexible monthly retainers — updates, monitoring, and content changes.",
+  },
+];
+
+export const INDUSTRIES = [
+  "E-Commerce & D2C",
+  "SaaS & Technology",
+  "Food & Restaurants",
+  "Healthcare & Wellness",
+  "Real Estate",
+  "Fashion & Beauty",
+  "Education & Learning",
+  "Coaching & Services",
+];
+
+export const COMPARISON = {
+  others: [
+    "Slow, unclear timelines",
+    "Extra charges for changes",
+    "No clear process",
+    "Designs break in dev",
+    "Complex, hard builds",
+  ],
+  pixo: [
+    "Clear weekly updates",
+    "Transparent, fixed pricing",
+    "AI-powered workflows",
+    "Design-dev alignment",
+    "Fast 5-day delivery",
+  ],
+};

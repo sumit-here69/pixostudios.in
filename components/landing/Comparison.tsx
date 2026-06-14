@@ -1,83 +1,69 @@
-import { Check, X as XIcon, Minus } from "lucide-react";
-import { COMPARISON } from "@/lib/constants";
-import { AnimatedSection, TextReveal } from "@/components/ui/AnimatedSection";
+"use client";
+
+import { COMPARISON, STUDIO_NAME } from "@/lib/constants";
+import { SerifAccent, InsetPanel, AccentButton } from "@/components/ui/shared";
 
 export default function Comparison() {
   return (
-    <section className="py-24 lg:py-32">
-      <div className="mx-auto max-w-5xl px-6 lg:px-8">
-        <AnimatedSection className="text-center mb-14">
-          <p className="text-sm font-semibold text-accent uppercase tracking-widest mb-3">
-            Compare
-          </p>
-          <h2 className="font-serif text-4xl sm:text-5xl tracking-tight text-primary mb-4">
-            <TextReveal text="Why us over the alternatives?" />
+    <section className="py-20 lg:py-28">
+      <div className="mx-auto max-w-4xl px-6 lg:px-8">
+        <div className="mb-12">
+          <h2 className="text-[38px] sm:text-[48px] font-bold leading-[1.15] text-primary mb-4">
+            We know choosing the right agency
+            <br />
+            is hard because few <SerifAccent>truly deliver</SerifAccent>.
           </h2>
-        </AnimatedSection>
+          <p className="text-[20px] sm:text-[24px] font-medium leading-[1.4] text-primary">
+            So we made it <span className="font-normal">simple</span>{" "}
+            <SerifAccent>to compare</SerifAccent> how
+            <br />
+            we work{" "}
+            <span className="inline-flex items-center w-[38px] h-[20px] bg-primary rounded-full mx-1 relative">
+              <span className="absolute right-[3px] w-[14px] h-[14px] bg-white rounded-full" />
+            </span>{" "}
+            versus what you usually
+            <br />
+            get <SerifAccent>in the market</SerifAccent>.
+          </p>
+        </div>
 
-        <AnimatedSection delay={0.15}>
-          <div className="overflow-x-auto rounded-3xl bg-surface">
-            <table className="w-full text-left">
-              <thead>
-                <tr className="border-b border-border/40">
-                  {COMPARISON.headers.map((header, i) => (
-                    <th
-                      key={header || "label"}
-                      className={`px-6 py-4 text-sm font-semibold ${
-                        i === 0
-                          ? "text-secondary w-48"
-                          : i === 1
-                          ? "text-accent"
-                          : "text-secondary"
-                      }`}
-                    >
-                      {header}
-                    </th>
-                  ))}
-                </tr>
-              </thead>
-              <tbody>
-                {COMPARISON.rows.map((row, rowIdx) => (
-                  <tr
-                    key={row.label}
-                    className={rowIdx < COMPARISON.rows.length - 1 ? "border-b border-border/30" : ""}
-                  >
-                    <td className="px-6 py-4 text-sm font-medium text-primary">
-                      {row.label}
-                    </td>
-                    {row.values.map((val, colIdx) => (
-                      <td
-                        key={val}
-                        className={`px-6 py-4 text-sm ${
-                          colIdx === 0 ? "text-primary font-medium" : "text-secondary"
-                        }`}
-                      >
-                        {colIdx === 0 && (
-                          <span className="inline-flex items-center gap-1.5">
-                            <Check size={15} className="text-success flex-shrink-0" />
-                            {val}
-                          </span>
-                        )}
-                        {colIdx === 1 && (
-                          <span className="inline-flex items-center gap-1.5">
-                            <Minus size={15} className="text-tertiary flex-shrink-0" />
-                            {val}
-                          </span>
-                        )}
-                        {colIdx === 2 && (
-                          <span className="inline-flex items-center gap-1.5">
-                            <XIcon size={15} className="text-red-400 flex-shrink-0" />
-                            {val}
-                          </span>
-                        )}
-                      </td>
-                    ))}
-                  </tr>
+        <InsetPanel>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-0 rounded-[16px] overflow-hidden">
+            <div className="bg-white p-8 shadow-[inset_0_1px_1px_rgba(6,6,18,0.18)]">
+              <h3 className="text-[17px] font-semibold text-primary mb-6">Other agencies</h3>
+              <ul className="space-y-4">
+                {COMPARISON.others.map((item, i) => (
+                  <li key={i} className="flex items-start gap-3 text-[16px] text-secondary">
+                    <svg width="6" height="10" viewBox="0 0 6 10" className="mt-1.5 shrink-0 opacity-40">
+                      <path d="M1 1l4 4-4 4" stroke="currentColor" strokeWidth="1.5" fill="none" strokeLinecap="round" />
+                    </svg>
+                    {item}
+                  </li>
                 ))}
-              </tbody>
-            </table>
+              </ul>
+            </div>
+
+            <div className="bg-[#ff8c42] p-8 rounded-r-[16px]">
+              <h3 className="text-[17px] font-semibold text-primary mb-6">{STUDIO_NAME}</h3>
+              <ul className="space-y-4">
+                {COMPARISON.pixo.map((item, i) => (
+                  <li key={i} className="flex items-start gap-3 text-[16px] text-primary/80">
+                    <svg width="6" height="10" viewBox="0 0 6 10" className="mt-1.5 shrink-0 opacity-70">
+                      <path d="M1 1l4 4-4 4" stroke="currentColor" strokeWidth="1.5" fill="none" strokeLinecap="round" />
+                    </svg>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
-        </AnimatedSection>
+        </InsetPanel>
+
+        <div className="flex flex-wrap items-center gap-5 mt-10">
+          <AccentButton href="#about">
+            Read our story
+          </AccentButton>
+        </div>
       </div>
     </section>
   );

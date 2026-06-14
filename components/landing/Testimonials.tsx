@@ -1,47 +1,65 @@
+"use client";
+
+import { useRef } from "react";
 import Image from "next/image";
-import { Quote } from "lucide-react";
 import { TESTIMONIALS } from "@/lib/constants";
-import { AnimatedSection, StaggerContainer, StaggerItem } from "@/components/ui/AnimatedSection";
+import { SectionHeader, InsetPanel, NavArrows } from "@/components/ui/shared";
 
 export default function Testimonials() {
+  const scrollRef = useRef<HTMLDivElement>(null);
+
+  const scroll = (dir: "left" | "right") => {
+    if (!scrollRef.current) return;
+    const amount = dir === "left" ? -460 : 460;
+    scrollRef.current.scrollBy({ left: amount, behavior: "smooth" });
+  };
+
   return (
-    <section className="relative py-24 lg:py-32 overflow-hidden">
-      <Image
-        src="/images/testimonials-bg.png"
-        alt=""
-        fill
-        className="object-cover opacity-15"
-      />
-      <div className="absolute inset-0 bg-linear-to-b from-bg via-bg/80 to-bg" />
+    <section className="py-20 lg:py-28">
+      <div className="mx-auto max-w-6xl px-6 lg:px-8">
+        <SectionHeader badge="Testimonials" heading="What clients say" />
 
-      <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
-        <AnimatedSection className="text-center mb-14">
-          <p className="text-sm font-semibold text-accent uppercase tracking-widest mb-3">
-            Testimonials
-          </p>
-          <h2 className="font-serif text-4xl sm:text-5xl tracking-tight text-primary">
-            Trusted by businesses across India
-          </h2>
-        </AnimatedSection>
-
-        <StaggerContainer className="grid md:grid-cols-3 gap-6">
-          {TESTIMONIALS.map((t) => (
-            <StaggerItem key={t.name}>
-              <div className="flex flex-col h-full p-7 rounded-3xl bg-white/80 backdrop-blur-sm transition-all">
-                <Quote size={24} className="text-accent/30 mb-4" />
-                <p className="flex-1 text-secondary leading-relaxed mb-6 text-[15px]">
+        <InsetPanel>
+          <div
+            ref={scrollRef}
+            className="flex gap-3 overflow-x-auto snap-x snap-mandatory pb-1"
+            style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+          >
+            {TESTIMONIALS.map((t, i) => (
+              <div
+                key={i}
+                className="min-w-[320px] lg:min-w-[400px] shrink-0 snap-center bg-white rounded-[16px] shadow-[inset_0_1px_1px_rgba(6,6,18,0.18)] p-7 flex flex-col justify-between"
+              >
+                <p className="text-[17px] text-primary leading-[1.7] mb-8 flex-1">
                   &ldquo;{t.quote}&rdquo;
                 </p>
-                <div>
-                  <p className="font-semibold text-primary text-sm">{t.name}</p>
-                  <p className="text-xs text-tertiary">
-                    {t.role} — {t.city}
-                  </p>
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center gap-3">
+                    <Image
+                      src={t.avatar}
+                      alt={t.name}
+                      width={40}
+                      height={40}
+                      className="rounded-full object-cover"
+                    />
+                    <div>
+                      <p className="text-[15px] font-semibold text-primary">{t.name}</p>
+                      <p className="text-[14px] text-secondary">— {t.role}</p>
+                    </div>
+                  </div>
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img src="/framer/zJWcHB20yyCSW9nYP85FUNuRmf4.svg" alt="5 stars" className="h-[14px]" />
                 </div>
               </div>
-            </StaggerItem>
-          ))}
-        </StaggerContainer>
+            ))}
+          </div>
+        </InsetPanel>
+
+        <NavArrows
+          onPrev={() => scroll("left")}
+          onNext={() => scroll("right")}
+          className="mt-5"
+        />
       </div>
     </section>
   );

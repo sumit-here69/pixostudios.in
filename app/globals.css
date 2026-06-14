@@ -1,54 +1,160 @@
 @import "tailwindcss";
 
+/* ─── Exact Framer Design Tokens ─── */
 :root {
-  --bg: #FAFAF8;
-  --bg-surface: #FFFFFF;
-  --bg-muted: #F5F5F3;
-  --border: #E8E8E6;
-  --border-hover: #D4D4D2;
-  --text-primary: #1A1A1A;
-  --text-secondary: #6B6B6B;
-  --text-tertiary: #9B9B9B;
-  --accent: #2563EB;
-  --accent-hover: #1D4ED8;
-  --accent-light: #EFF6FF;
-  --success: #16A34A;
+  --bg: #f5f4f3;
+  --bg-surface: #eeecea;
+  --bg-dark: #060612;
+  --border: #eeecea;
+  --border-dark: #e7e2dd;
+  --text-primary: #060612;
+  --text-secondary: #69686e;
+  --accent: #ff6321;
+  --accent-hover: #cf4e17;
+  --accent-light: rgba(255, 99, 33, 0.15);
+  --white: #ffffff;
 }
 
 @theme inline {
   --color-bg: var(--bg);
   --color-surface: var(--bg-surface);
-  --color-muted: var(--bg-muted);
+  --color-dark: var(--bg-dark);
   --color-border: var(--border);
-  --color-border-hover: var(--border-hover);
+  --color-border-dark: var(--border-dark);
   --color-primary: var(--text-primary);
   --color-secondary: var(--text-secondary);
-  --color-tertiary: var(--text-tertiary);
   --color-accent: var(--accent);
   --color-accent-hover: var(--accent-hover);
   --color-accent-light: var(--accent-light);
-  --color-success: var(--success);
-  --font-sans: var(--font-plus-jakarta);
-  --font-serif: var(--font-larken);
+  --font-sans: var(--font-dm-sans);
+  --font-serif: var(--font-serif);
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   background: var(--bg);
   color: var(--text-primary);
-  font-family: var(--font-sans, 'Plus Jakarta Sans', system-ui, sans-serif);
+  font-family: var(--font-sans, "DM Sans", system-ui, sans-serif);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-html.lenis, html.lenis body {
-  height: auto;
-}
-
-.font-serif {
-  font-family: var(--font-serif, 'Larken', Georgia, 'Times New Roman', serif);
 }
 
 ::selection {
   background: var(--accent);
   color: white;
 }
+
+/* ─── Inset container — recessed panel (these classes are detected by Tailwind) ─── */
+.inset-container {
+  background: var(--bg-surface);
+  border: 1px solid var(--white);
+  border-radius: 16px;
+  padding: 10px;
+  box-shadow: inset 0 0 6px rgba(6, 6, 18, 0.18);
+}
+.inset-container-lg {
+  background: var(--bg-surface);
+  border: 1px solid var(--white);
+  border-radius: 20px;
+  padding: 12px;
+  box-shadow: inset 0 0 6px rgba(6, 6, 18, 0.18);
+}
+
+/* ─── Section badge ─── */
+.section-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+}
+.section-badge::before,
+.section-badge::after {
+  content: "";
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+.section-badge::before {
+  border-width: 4px 6px 4px 0;
+  border-color: transparent var(--text-secondary) transparent transparent;
+}
+.section-badge::after {
+  border-width: 4px 0 4px 6px;
+  border-color: transparent transparent transparent var(--text-secondary);
+}
+
+/* ─── Floating card ─── */
+.floating-card {
+  background: white;
+  border: 1px solid var(--border-dark);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(6, 6, 18, 0.06);
+  padding: 6px;
+}
+
+/* ─── Concentric arcs background ─── */
+.concentric-bg {
+  position: relative;
+}
+.concentric-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 50% 110%, transparent 30%, transparent 30%),
+    repeating-radial-gradient(
+      circle at 50% 110%,
+      transparent 0px,
+      transparent 118px,
+      #eeecea 118px,
+      #eeecea 119px,
+      transparent 119px,
+      transparent 240px,
+      #eeecea 240px,
+      #eeecea 241px
+    );
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.7;
+}
+
+/* ─── Animations ─── */
+@keyframes float {
+  0%, 100% { transform: translateY(0) rotate(var(--rotate, 0deg)); }
+  50% { transform: translateY(-16px) rotate(var(--rotate, 0deg)); }
+}
+
+@keyframes float-reverse {
+  0%, 100% { transform: translateY(0) rotate(var(--rotate, 0deg)); }
+  50% { transform: translateY(12px) rotate(var(--rotate, 0deg)); }
+}
+
+@keyframes ticker {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes fade-in-up {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes scale-in {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.animate-float { animation: float 6s ease-in-out infinite; }
+.animate-float-reverse { animation: float-reverse 5s ease-in-out infinite; }
+.animate-float-slow { animation: float 8s ease-in-out infinite; }
+.animate-ticker { animation: ticker 30s linear infinite; }
+.animate-fade-in-up { animation: fade-in-up 0.6s ease-out forwards; }
+.animate-scale-in { animation: scale-in 0.5s ease-out forwards; }
