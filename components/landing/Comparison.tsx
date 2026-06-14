@@ -29,11 +29,11 @@ export default function Comparison() {
 
         <InsetPanel>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-0 rounded-[16px] overflow-hidden">
-            <div className="bg-white p-8 shadow-[inset_0_1px_1px_rgba(6,6,18,0.18)]">
-              <h3 className="text-[17px] font-semibold text-primary mb-6">Other agencies</h3>
-              <ul className="space-y-4">
+            <div className="bg-white p-10 lg:p-12 shadow-[inset_0_1px_1px_rgba(6,6,18,0.18)]" style={{ minHeight: "340px" }}>
+              <h3 className="text-[20px] font-semibold text-primary mb-8">Other agencies</h3>
+              <ul className="space-y-5">
                 {COMPARISON.others.map((item, i) => (
-                  <li key={i} className="flex items-start gap-3 text-[16px] text-secondary">
+                  <li key={i} className="flex items-start gap-3 text-[17px] text-secondary">
                     <svg width="6" height="10" viewBox="0 0 6 10" className="mt-1.5 shrink-0 opacity-40">
                       <path d="M1 1l4 4-4 4" stroke="currentColor" strokeWidth="1.5" fill="none" strokeLinecap="round" />
                     </svg>
@@ -43,11 +43,11 @@ export default function Comparison() {
               </ul>
             </div>
 
-            <div className="bg-[#ff8c42] p-8 rounded-r-[16px]">
-              <h3 className="text-[17px] font-semibold text-primary mb-6">{STUDIO_NAME}</h3>
-              <ul className="space-y-4">
+            <div className="bg-[#ff8c42] p-10 lg:p-12 rounded-[16px]" style={{ minHeight: "340px" }}>
+              <h3 className="text-[20px] font-semibold text-primary mb-8">{STUDIO_NAME}</h3>
+              <ul className="space-y-5">
                 {COMPARISON.pixo.map((item, i) => (
-                  <li key={i} className="flex items-start gap-3 text-[16px] text-primary/80">
+                  <li key={i} className="flex items-start gap-3 text-[17px] text-primary/80">
                     <svg width="6" height="10" viewBox="0 0 6 10" className="mt-1.5 shrink-0 opacity-70">
                       <path d="M1 1l4 4-4 4" stroke="currentColor" strokeWidth="1.5" fill="none" strokeLinecap="round" />
                     </svg>

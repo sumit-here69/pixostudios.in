@@ -30,6 +30,18 @@ function AccordionItem({ index, q, a }: { index: number; q: string; a: string })
   );
 }
 
+const AVATAR_COLORS = ["#FFD4B8", "#B8D8FF", "#D4B8FF"];
+
+function PersonAvatar({ color }: { color: string }) {
+  return (
+    <svg width="36" height="36" viewBox="0 0 100 100" className="rounded-full">
+      <circle cx="50" cy="50" r="50" fill={color} />
+      <circle cx="50" cy="38" r="16" fill="white" opacity="0.6" />
+      <ellipse cx="50" cy="72" rx="22" ry="16" fill="white" opacity="0.6" />
+    </svg>
+  );
+}
+
 export default function FAQ() {
   return (
     <section id="faq" className="py-20 lg:py-28">
@@ -59,12 +71,14 @@ export default function FAQ() {
         </InsetPanel>
 
         <div className="text-center mt-10">
-          <div className="flex items-center justify-center gap-1 mb-3">
-            {[1, 2, 3].map((i) => (
-              <div key={i} className="w-8 h-8 rounded-full bg-surface border border-border -ml-1.5 first:ml-0" />
+          <div className="flex items-center justify-center gap-0">
+            {AVATAR_COLORS.map((color, i) => (
+              <div key={i} className="-ml-2 first:ml-0 ring-2 ring-[var(--bg)] rounded-full">
+                <PersonAvatar color={color} />
+              </div>
             ))}
           </div>
-          <p className="text-[15px] text-secondary mb-3">Still have questions?</p>
+          <p className="text-[15px] text-secondary mb-3 mt-3">Still have questions?</p>
           <AccentButton href={STUDIO_CAL} external className="h-[38px] px-5 text-[13px]">
             Let&apos;s talk
           </AccentButton>

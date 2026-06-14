@@ -42,7 +42,7 @@ export default function HowItWorks() {
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-[1fr_44px_1fr] gap-0 items-start max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-[1fr_44px_1fr] gap-x-8 gap-y-0 items-start max-w-4xl mx-auto">
             {/* Left column — odd steps content */}
             <div className="hidden lg:flex flex-col gap-6 pt-2">
               {PROCESS_STEPS.map((s, i) =>
@@ -51,7 +51,7 @@ export default function HowItWorks() {
                     key={i}
                     className={`rounded-[16px] p-6 transition-all duration-700 ${
                       i === active
-                        ? "bg-white shadow-[0_4px_24px_rgba(6,6,18,0.08)] scale-100 opacity-100"
+                        ? "bg-white scale-100 opacity-100"
                         : i < active
                         ? "bg-transparent opacity-40 scale-95"
                         : "bg-transparent opacity-25 scale-95"

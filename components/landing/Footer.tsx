@@ -4,24 +4,19 @@ import Image from "next/image";
 import { STUDIO_NAME, STUDIO_SHORT, STUDIO_EMAIL, STUDIO_PHONE, STUDIO_DOMAIN } from "@/lib/constants";
 import CTABanner from "./CTABanner";
 
-const QUICK_LINKS_1 = [
+const QUICK_LINKS = [
   { label: "Home", href: "/" },
   { label: "About us", href: "#about" },
   { label: "Projects", href: "#projects" },
   { label: "Services", href: "#services" },
 ];
 
-const QUICK_LINKS_2 = [
-  { label: "Contact us", href: "#contact" },
-  { label: "Privacy Policy", href: "#" },
-];
-
 export default function Footer() {
   return (
-    <footer className="bg-white border-t border-border">
+    <footer className="bg-white">
       <CTABanner />
       <div className="mx-auto max-w-6xl px-6 lg:px-8 py-16 lg:py-20">
-        <div className="grid grid-cols-1 md:grid-cols-[1.4fr_1fr_1fr_1.2fr] gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-[1.4fr_1fr_1.2fr] gap-12">
           <div>
             <a href="/" className="flex items-center gap-2.5 mb-5">
               <Image src="/logo.png" alt="Pixo" width={28} height={28} />
@@ -50,18 +45,7 @@ export default function Footer() {
           <div>
             <h4 className="text-[14px] font-semibold uppercase tracking-wider text-primary mb-5">Quick Links</h4>
             <ul className="space-y-3">
-              {QUICK_LINKS_1.map((link) => (
-                <li key={link.label}>
-                  <a href={link.href} className="text-[16px] text-secondary hover:text-accent transition-colors">{link.label}</a>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div>
-            <h4 className="text-[14px] font-semibold uppercase tracking-wider text-primary mb-5 opacity-0">&nbsp;</h4>
-            <ul className="space-y-3">
-              {QUICK_LINKS_2.map((link) => (
+              {QUICK_LINKS.map((link) => (
                 <li key={link.label}>
                   <a href={link.href} className="text-[16px] text-secondary hover:text-accent transition-colors">{link.label}</a>
                 </li>
@@ -86,24 +70,24 @@ export default function Footer() {
                 <a
                   key={platform}
                   href="#"
-                  className="w-11 h-11 rounded-full bg-primary flex items-center justify-center hover:bg-accent transition-colors"
+                  className="w-14 h-14 rounded-full bg-primary flex items-center justify-center hover:bg-accent transition-colors"
                   aria-label={platform}
                 >
                   {platform === "Instagram" && (
-                    <svg width="16" height="16" viewBox="0 0 14 14" fill="none">
+                    <svg width="20" height="20" viewBox="0 0 14 14" fill="none">
                       <rect x="1" y="1" width="12" height="12" rx="3.5" stroke="white" strokeWidth="1.3"/>
                       <circle cx="7" cy="7" r="2.5" stroke="white" strokeWidth="1.3"/>
                       <circle cx="10.5" cy="3.5" r="0.8" fill="white"/>
                     </svg>
                   )}
                   {platform === "LinkedIn" && (
-                    <svg width="16" height="16" viewBox="0 0 14 14" fill="none">
+                    <svg width="20" height="20" viewBox="0 0 14 14" fill="none">
                       <path d="M3.5 5.5V10.5M5.5 10.5V7.5C5.5 6.4 6.4 5.5 7.5 5.5C8.6 5.5 9.5 6.4 9.5 7.5V10.5M9.5 10.5V7.5" stroke="white" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round"/>
                       <circle cx="3.5" cy="3.5" r="0.8" fill="white"/>
                     </svg>
                   )}
                   {platform === "X" && (
-                    <svg width="16" height="16" viewBox="0 0 14 14" fill="none">
+                    <svg width="20" height="20" viewBox="0 0 14 14" fill="none">
                       <path d="M2.5 2.5L6 7L2.5 11.5M11.5 2.5L8 7L11.5 11.5" stroke="white" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round"/>
                     </svg>
                   )}

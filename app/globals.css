@@ -2,7 +2,7 @@
 
 /* ─── Exact Framer Design Tokens ─── */
 :root {
-  --bg: #f5f4f3;
+  --bg: #f7f6f5;
   --bg-surface: #eeecea;
   --bg-dark: #060612;
   --border: #eeecea;
@@ -114,16 +114,16 @@ body {
       circle at 50% 110%,
       transparent 0px,
       transparent 118px,
-      #eeecea 118px,
-      #eeecea 119px,
+      #e5e2df 118px,
+      #e5e2df 119px,
       transparent 119px,
       transparent 240px,
-      #eeecea 240px,
-      #eeecea 241px
+      #e5e2df 240px,
+      #e5e2df 241px
     );
   pointer-events: none;
   z-index: 0;
-  opacity: 0.7;
+  opacity: 1;
 }
 
 /* ─── Animations ─── */

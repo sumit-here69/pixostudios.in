@@ -1,7 +1,34 @@
 "use client";
 
+import { useEffect, useRef, useState } from "react";
 import { SERVICES, STUDIO_CAL } from "@/lib/constants";
 import { SerifAccent, AccentButton, InsetPanel, Card, TAG_PILL_CLASSES } from "@/components/ui/shared";
+
+function RevealCard({ children, index }: { children: React.ReactNode; index: number }) {
+  const ref = useRef<HTMLDivElement>(null);
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => { if (entry.isIntersecting) setVisible(true); },
+      { threshold: 0.15 }
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
+
+  return (
+    <div
+      ref={ref}
+      className={`transition-all duration-700 ease-out ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}`}
+      style={{ transitionDelay: `${index * 60}ms` }}
+    >
+      {children}
+    </div>
+  );
+}
 
 export default function Services() {
   return (
@@ -26,25 +53,27 @@ export default function Services() {
           <InsetPanel>
             <div className="space-y-3">
               {SERVICES.map((service, i) => (
-                <Card key={i} hover className="rounded-[16px] p-8">
-                  <h3 className="text-[26px] font-semibold text-primary group-hover:text-white transition-colors">
-                    {service.title}
-                  </h3>
-                  <div className="border-t border-dashed border-border group-hover:border-white/20 my-4 transition-colors" />
-                  <p className="text-[16px] text-secondary group-hover:text-white/70 leading-relaxed mb-6 max-w-lg transition-colors">
-                    {service.description}
-                  </p>
-                  <div className="flex flex-wrap gap-2">
-                    {service.tags.map((tag) => (
-                      <span
-                        key={tag}
-                        className={`${TAG_PILL_CLASSES} group-hover:border-white/20 group-hover:text-white/60 transition-colors`}
-                      >
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-                </Card>
+                <RevealCard key={i} index={i}>
+                  <Card hover className="rounded-[16px] p-8">
+                    <h3 className="text-[26px] font-semibold text-primary group-hover:text-white transition-colors">
+                      {service.title}
+                    </h3>
+                    <div className="border-t border-dashed border-border group-hover:border-white/20 my-4 transition-colors" />
+                    <p className="text-[16px] text-secondary group-hover:text-white/70 leading-relaxed mb-6 max-w-lg transition-colors">
+                      {service.description}
+                    </p>
+                    <div className="flex flex-wrap gap-2">
+                      {service.tags.map((tag) => (
+                        <span
+                          key={tag}
+                          className={`${TAG_PILL_CLASSES} group-hover:border-white/20 group-hover:text-white/60 transition-colors`}
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                  </Card>
+                </RevealCard>
               ))}
             </div>
           </InsetPanel>

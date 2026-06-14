@@ -1,7 +1,7 @@
 export const STUDIO_NAME = "Pixo Studios";
 export const STUDIO_SHORT = "Pixo";
-export const STUDIO_EMAIL = "hello@pixostudios.in";
-export const STUDIO_PHONE = "+91 82221 68880";
+export const STUDIO_EMAIL = "pixostudios.in@gmail.com";
+export const STUDIO_PHONE = "+91 63989 35305";
 export const STUDIO_CAL = "https://cal.com/pixo-studios/30min";
 export const STUDIO_DOMAIN = "pixostudios.in";
 
