@@ -124,7 +124,7 @@ export default function BentoGrid() {
               />
               <div className="absolute bottom-0 left-0 right-0 bg-linear-to-t from-black/70 to-transparent p-4">
                 <p className="text-[14px] font-semibold text-white">Sumit Kumar</p>
-                <p className="text-[12px] text-white/60 uppercase tracking-wider">Founder — Pixo Studios</p>
+                <p className="text-[12px] text-white/60 uppercase tracking-wider">Founder, Pixo Studios</p>
               </div>
             </div>
 

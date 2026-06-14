@@ -14,24 +14,52 @@ export const NAV_LINKS = [
 
 export const SERVICES = [
   {
-    title: "Branding & Identity",
+    title: "Landing Page Website",
     description:
-      "From concept to prototype, we create user-centered interfaces that balance beauty with performance, ensuring every interaction feels effortless.",
-    tags: ["Identity", "Positioning", "Voice"],
+      "Single or multi-page marketing websites, mobile responsive, SEO optimized with WhatsApp integration and contact forms.",
+    tags: ["D2C", "Startups", "Local Business"],
+    icon: "/framer/rQNAGmYR2DGFWU2U3JkMB4Hys.svg",
+  },
+  {
+    title: "E-Commerce Website",
+    description:
+      "Full shopping experience with cart, checkout, Razorpay/UPI payment integration, product management, and order tracking.",
+    tags: ["D2C Brands", "Online Stores"],
+    icon: "/framer/JCDk8i61Ec1N2laCFRxqdUPv0sM.svg",
+  },
+  {
+    title: "Brand Identity",
+    description:
+      "Logo design, color palette, typography, brand guidelines document, and social media templates for new brands and rebrands.",
+    tags: ["Logo", "Guidelines", "Templates"],
     icon: "/framer/rQNAGmYR2DGFWU2U3JkMB4Hys.svg",
   },
   {
     title: "UI/UX Design",
     description:
-      "Crafting intuitive, user-centered interfaces that blend clarity, beauty, and effortless interaction.",
-    tags: ["Web", "Product", "App"],
+      "User research, wireframes, prototypes, high-fidelity Figma designs, and design system documentation for apps, dashboards, and SaaS.",
+    tags: ["Apps", "Dashboards", "SaaS"],
     icon: "/framer/JCDk8i61Ec1N2laCFRxqdUPv0sM.svg",
   },
   {
-    title: "Web Development",
+    title: "MVP Development",
     description:
-      "We build fast, scalable, and fully responsive websites that perform beautifully — whether it's a simple portfolio or a full digital platform.",
-    tags: ["Next.js", "React", "Framer"],
+      "Full-stack web applications with user auth, payments, admin panel, cloud deployment, and CI/CD setup for funded startups.",
+    tags: ["Full-Stack", "Startups", "Products"],
+    icon: "/framer/JCDk8i61Ec1N2laCFRxqdUPv0sM.svg",
+  },
+  {
+    title: "AI-Native Solutions",
+    description:
+      "Custom AI chatbots, workflow automation, and AI-powered features integrated into your existing products for a competitive edge.",
+    tags: ["Chatbots", "Automation", "AI"],
+    icon: "/framer/rQNAGmYR2DGFWU2U3JkMB4Hys.svg",
+  },
+  {
+    title: "Product Redesign",
+    description:
+      "Complete UX audit, modern redesign with improved performance, and migration to a modern tech stack for outdated apps and websites.",
+    tags: ["UX Audit", "Redesign", "Migration"],
     icon: "/framer/JCDk8i61Ec1N2laCFRxqdUPv0sM.svg",
   },
 ];
@@ -42,7 +70,7 @@ export const PROJECTS = [
     industry: "Food & Beverage",
     scope: "Brand Identity + Website",
     description:
-      "Complete digital identity for a specialty coffee brand — conversion-focused website with online ordering and brand-driven homepage.",
+      "Complete digital identity for a specialty coffee brand. Conversion-focused website with online ordering and brand-driven homepage.",
     image: "/framer/FFHEfZV9GVwc9HziR2BNgXekq5g.jpg",
     sideImage: "/framer/lNE1sUbqwHFCb5UOH9OnWTyekyE.jpg",
   },
@@ -69,7 +97,7 @@ export const PROJECTS = [
     industry: "Beauty & Skincare",
     scope: "E-Commerce + Brand Identity",
     description:
-      "D2C skincare brand with subscription model — elevated portfolio design to showcase craftsmanship with greater clarity and visual impact.",
+      "D2C skincare brand with subscription model. Elevated portfolio design to showcase craftsmanship with greater clarity and visual impact.",
     image: "/framer/VJNWBeLoIV2o2VLFqAYQN34EDlE.jpg",
     sideImage: "/framer/fQQPHGXKTYJhKBvphhxj1nBfFo.jpg",
   },
@@ -180,7 +208,7 @@ export const FAQ_DATA = [
   },
   {
     q: "Do you provide development too?",
-    a: "Yes. We handle everything — design, development, deployment. No need to hire separate teams. One studio, end-to-end delivery.",
+    a: "Yes. We handle everything: design, development, deployment. No need to hire separate teams. One studio, end-to-end delivery.",
   },
   {
     q: "How do we start a project?",
@@ -188,7 +216,7 @@ export const FAQ_DATA = [
   },
   {
     q: "Can you help with ongoing updates after launch?",
-    a: "Every project includes 30 days of free support. For ongoing maintenance, we offer flexible monthly retainers — updates, monitoring, and content changes.",
+    a: "Every project includes 30 days of free support. For ongoing maintenance, we offer flexible monthly retainers: updates, monitoring, and content changes.",
   },
 ];
 

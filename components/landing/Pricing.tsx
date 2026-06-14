@@ -19,7 +19,7 @@ export default function Pricing() {
                     ? "bg-accent text-primary"
                     : "bg-white shadow-[inset_0_1px_1px_rgba(6,6,18,0.18)] text-primary"
                 }`}
-                style={{ minHeight: "78vh" }}
+                style={{}}
               >
                 <div className={`p-8 lg:p-10 pb-6 ${plan.popular ? "border-b border-primary/10" : "border-b border-border"}`}>
                   {plan.popular && (

@@ -44,7 +44,7 @@ export default function Testimonials() {
                     />
                     <div>
                       <p className="text-[16px] font-semibold text-primary">{t.name}</p>
-                      <p className="text-[14px] text-secondary">— {t.role}</p>
+                      <p className="text-[14px] text-secondary">{t.role}</p>
                     </div>
                   </div>
                   {/* eslint-disable-next-line @next/next/no-img-element */}

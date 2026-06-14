@@ -18,7 +18,7 @@ const instrumentSerif = Instrument_Serif({
 });
 
 export const metadata: Metadata = {
-  title: "Pixo Studios — Premium Design & Development Studio",
+  title: "Pixo Studios | Premium Design & Development Studio",
   description:
     "We design brands that move people. Premium websites, brand identities, and digital products for ambitious businesses. Based in India, working worldwide.",
   keywords: [
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     apple: "/apple-touch-icon.png",
   },
   openGraph: {
-    title: "Pixo Studios — Premium Design & Development Studio",
+    title: "Pixo Studios | Premium Design & Development Studio",
     description:
       "We design brands that move people. Premium websites, brand identities, and digital products for ambitious businesses.",
     type: "website",

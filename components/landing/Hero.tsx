@@ -40,7 +40,7 @@ export default function Hero() {
         >
           We combine design, development, and AI to help ambitious
           businesses stand out and grow. Premium digital experiences
-          — without the agency markup.
+          without the agency markup.
         </p>
 
         <div
