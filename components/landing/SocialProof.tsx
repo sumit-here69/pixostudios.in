@@ -19,7 +19,7 @@ export default function PortfolioShowcase() {
       {images.map((img, i) => (
         <div
           key={i}
-          className={`absolute ${img.className} hidden lg:block rounded-[12px] overflow-hidden border border-border shadow-[0_4px_16px_rgba(6,6,18,0.08)]`}
+          className={`absolute ${img.className} hidden sm:block rounded-[12px] overflow-hidden border border-border shadow-[0_4px_16px_rgba(6,6,18,0.08)]`}
           style={{ zIndex: img.z }}
         >
           {/* eslint-disable-next-line @next/next/no-img-element */}

@@ -21,13 +21,12 @@ export default function Testimonials() {
         <InsetPanel>
           <div
             ref={scrollRef}
-            className="flex gap-4 overflow-x-auto snap-x snap-mandatory pb-1 px-1"
-            style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+            className="grid grid-cols-1 sm:grid-cols-2 gap-4"
           >
-            {TESTIMONIALS.map((t, i) => (
+            {TESTIMONIALS.slice(0, 2).map((t, i) => (
               <div
                 key={i}
-                className="min-w-[340px] lg:min-w-[380px] shrink-0 snap-start bg-white rounded-[16px] shadow-[inset_0_1px_1px_rgba(6,6,18,0.18)] p-8 flex flex-col justify-between"
+                className="bg-white rounded-[16px] shadow-[inset_0_1px_1px_rgba(6,6,18,0.18)] p-8 flex flex-col justify-between"
               >
                 <p className="text-[17px] text-primary leading-[1.7] mb-8 flex-1">
                   &ldquo;{t.quote}&rdquo;

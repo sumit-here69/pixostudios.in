@@ -6,7 +6,7 @@ import { SerifAccent, AccentButton } from "@/components/ui/shared";
 function FloatingIcon({ children, className, delay, duration }: { children: React.ReactNode; className: string; delay: string; duration: number }) {
   return (
     <div
-      className={`absolute floating-card hidden lg:block ${className}`}
+      className={`absolute floating-card hidden md:block ${className}`}
       style={{
         animation: `float ${duration}s ease-in-out infinite`,
         animationDelay: delay,
@@ -115,7 +115,7 @@ export default function Hero() {
         </svg>
       </FloatingIcon>
 
-      <div className="relative z-10 w-full max-w-3xl mx-auto px-6 pb-14 text-center mt-10 animate-fade-in-up" style={{ animationDelay: "0.5s" }}>
+      <div className="relative z-10 w-full max-w-3xl mx-auto px-6 pb-6 text-center mt-10 animate-fade-in-up" style={{ animationDelay: "0.5s" }}>
         <p className="text-[13px] font-semibold tracking-[0.18em] text-secondary uppercase mb-6">
           Trusted by ambitious brands
         </p>
@@ -128,6 +128,15 @@ export default function Hero() {
           <img src="/framer/XtbcuAyPb9O6snG40Sl8xTjSng.svg" alt="XOAME" className="h-[18px]" />
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img src="/framer/faxb3V2g9OlQEebiIquNWGSuoA.svg" alt="next" className="h-[18px]" />
+        </div>
+      </div>
+
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 animate-fade-in-up" style={{ animationDelay: "0.8s" }}>
+        <div
+          className="w-7 h-11 rounded-full border-2 border-primary/30 flex justify-center pt-2"
+          style={{ animation: "float 2s ease-in-out infinite" }}
+        >
+          <div className="w-1.5 h-3 rounded-full bg-accent/60" />
         </div>
       </div>
     </section>
