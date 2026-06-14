@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { STUDIO_NAME, STUDIO_SHORT, STUDIO_EMAIL, STUDIO_PHONE, STUDIO_DOMAIN } from "@/lib/constants";
+import CTABanner from "./CTABanner";
 
 const QUICK_LINKS_1 = [
   { label: "Home", href: "/" },
@@ -18,6 +19,7 @@ const QUICK_LINKS_2 = [
 export default function Footer() {
   return (
     <footer className="bg-white border-t border-border">
+      <CTABanner />
       <div className="mx-auto max-w-6xl px-6 lg:px-8 py-16 lg:py-20">
         <div className="grid grid-cols-1 md:grid-cols-[1.4fr_1fr_1fr_1.2fr] gap-12">
           <div>

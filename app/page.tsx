@@ -18,7 +18,6 @@ export default function Home() {
       <Navbar />
       <main>
         <Hero />
-        <PortfolioShowcase />
         <Comparison />
         <BentoGrid />
         <Services />
@@ -27,7 +26,6 @@ export default function Home() {
         <Pricing />
         <Testimonials />
         <FAQ />
-        <CTABanner />
       </main>
       <Footer />
     </>
