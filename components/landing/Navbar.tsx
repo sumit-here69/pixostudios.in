@@ -27,9 +27,9 @@ export default function Navbar() {
   ];
 
   return (
-    <nav ref={navRef} className="fixed top-5 left-1/2 -translate-x-1/2 z-50">
-      <div className="flex items-center bg-white rounded-[16px] shadow-[0_4px_24px_rgba(6,6,18,0.08)] px-6 h-[60px] gap-3">
-        <a href="/" className="flex items-center gap-2.5 pr-5 border-r border-[var(--border)]">
+    <nav ref={navRef} className="fixed top-6 z-50 left-1/2 -translate-x-1/2 sm:left-12 sm:translate-x-0">
+      <div className="flex items-center bg-white rounded-[16px] shadow-[0_4px_24px_rgba(6,6,18,0.08)] px-4 sm:px-6 h-[60px] gap-2 sm:gap-3">
+        <a href="/" className="flex items-center gap-2 sm:gap-2.5 pr-4 sm:pr-5 border-r border-[var(--border)]">
           <Image src="/logo.png" alt="Pixo" width={30} height={30} />
           <span className="text-[19px] font-bold text-primary">{STUDIO_SHORT}</span>
         </a>
@@ -47,7 +47,7 @@ export default function Navbar() {
           href={STUDIO_CAL}
           target="_blank"
           rel="noopener noreferrer"
-          className="ml-1 flex items-center h-[42px] px-7 rounded-[10px] bg-primary text-white text-[15px] font-semibold hover:bg-[#1a1a2e] transition-colors"
+          className="ml-1 flex items-center h-[42px] px-5 sm:px-7 rounded-[10px] whitespace-nowrap bg-primary text-white text-[15px] font-semibold hover:bg-[#1a1a2e] transition-colors"
         >
           Get started
         </a>

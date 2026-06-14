@@ -12,18 +12,18 @@ function AccordionItem({ index, q, a }: { index: number; q: string; a: string })
       onClick={() => setOpen(!open)}
       className="w-full flex items-start gap-4 text-left py-5 px-6 border-b border-border last:border-b-0 hover:bg-[#faf9f8] transition-colors"
     >
-      <span className="text-[14px] text-secondary shrink-0 mt-0.5">{index}.</span>
+      <span className="text-[15px] text-secondary shrink-0 mt-1">{index}.</span>
       <div className="flex-1">
         <div className="flex items-center justify-between gap-4">
-          <span className="text-[17px] font-medium text-primary">{q}</span>
+          <span className="text-[16px] sm:text-[17px] font-medium text-primary leading-snug">{q}</span>
           <div className={`w-6 h-6 rounded-full bg-primary flex items-center justify-center shrink-0 transition-transform ${open ? "rotate-45" : ""}`}>
-            <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
+            <svg width="12" height="12" viewBox="0 0 10 10" fill="none">
               <path d="M5 1v8M1 5h8" stroke="white" strokeWidth="1.5" strokeLinecap="round" />
             </svg>
           </div>
         </div>
-        <div className={`overflow-hidden transition-all duration-300 ${open ? "max-h-40 mt-3" : "max-h-0"}`}>
-          <p className="text-[15px] text-secondary leading-relaxed pr-8">{a}</p>
+        <div className={`overflow-hidden transition-all duration-300 ${open ? "max-h-60 mt-4" : "max-h-0"}`}>
+          <p className="text-[14px] text-primary/70 leading-[1.7] pr-6">{a}</p>
         </div>
       </div>
     </button>
@@ -31,9 +31,9 @@ function AccordionItem({ index, q, a }: { index: number; q: string; a: string })
 }
 
 const AVATAR_IMAGES = [
-  "/framer/4RGuWhw5VjbAJbMonewftyJZ4c.jpg",
-  "/framer/54rgdyHlT5jTLB1jlx1W7jdkRbE.jpg",
-  "/framer/5O8P63EQwkFO1m5OTR4jsw7hI8.jpg",
+  "/framer/avatar-emma.jpg",
+  "/framer/avatar-david.jpg",
+  "/framer/avatar-michael.jpg",
 ];
 
 export default function FAQ() {
@@ -43,13 +43,13 @@ export default function FAQ() {
         <div className="text-center mb-12">
           <span className="section-badge mb-4 block">Got Questions</span>
           <div className="flex items-center justify-center gap-3">
-            <h2 className="text-[36px] sm:text-[48px] font-bold leading-[1.08] text-primary">
+            <h2 className="text-[36px] sm:text-[48px] font-medium text-primary sm:pl-24">
               We&apos;ve got answers
             </h2>
             <div className="hidden sm:block">
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/framer/70A1TVDytyaXNukzYYdKPABwt1c.svg" alt="" className="w-6 h-6" />
-              <p className="text-[14px] text-accent" style={{ fontFamily: "var(--font-serif)" }}>
+              <img src="/framer/70A1TVDytyaXNukzYYdKPABwt1c.svg" alt="" className="w-6 h-6 -scale-x-100 -rotate-32"  />
+              <p className="text-[14px] text-accent">
                 Let&apos;s clear things up
               </p>
             </div>

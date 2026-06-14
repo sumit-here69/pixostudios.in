@@ -1,7 +1,6 @@
 "use client";
 
 import { useRef } from "react";
-import Image from "next/image";
 import { PROJECTS } from "@/lib/constants";
 import { SectionHeader, InsetPanel, NavArrows, AccentButton } from "@/components/ui/shared";
 
@@ -35,35 +34,36 @@ export default function Portfolio() {
               <div
                 key={i}
                 data-card
-                className="min-w-[85%] sm:min-w-[75%] lg:min-w-[90%] shrink-0 snap-center bg-white rounded-[16px] shadow-[inset_0_1px_1px_rgba(6,6,18,0.18)] overflow-hidden"
-                style={{ height: "420px" }}
+                className="w-full shrink-0 snap-center bg-white rounded-[16px] overflow-hidden"
+                style={{ maxHeight: "560px" }}
               >
-                <div className="grid grid-cols-1 md:grid-cols-2 h-full">
-                  <div className="p-8 lg:p-10 flex flex-col justify-center h-full overflow-hidden">
-                    <h3 className="text-[26px] font-bold text-primary mb-3">
-                      {project.name}
-                    </h3>
-                    <p className="text-[14px] text-secondary mb-1">
-                      Industry: <span className="font-medium text-primary">{project.industry}</span>
-                    </p>
-                    <p className="text-[14px] text-secondary mb-5">
-                      Scope: <span className="font-medium text-primary">{project.scope}</span>
-                    </p>
-                    <div className="border-t border-dashed border-border my-4" />
-                    <p className="text-[15px] text-secondary leading-relaxed mb-6">
-                      {project.description}
-                    </p>
-                    <AccentButton href="#contact" className="w-fit">
-                      View project detail
-                    </AccentButton>
+                <div className="flex flex-col md:flex-row h-full">
+                  <div className="w-full md:w-1/3 p-8 lg:p-10 flex flex-col justify-between overflow-hidden">
+                    <div>
+                      <h3 className="text-[36px] font-bold text-primary mb-3">
+                        {project.name}
+                      </h3>
+                      <p className="text-[16px] text-secondary mb-2">
+                        Industry: <span className="font-medium text-primary">{project.industry}</span>
+                      </p>
+                    </div>
+                    <div>
+                      <div className="border-t border-dashed border-border my-4" />
+                      <p className="text-[15px] md:text-[17px] text-secondary leading-relaxed mb-6">
+                        {project.description}
+                      </p>
+                      <AccentButton href="#contact" className="w-fit">
+                        View project detail
+                      </AccentButton>
+                    </div>
                   </div>
 
-                  <div className="relative hidden md:block">
-                    <Image
+                  <div className="w-full md:w-2/3 p-4">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img
                       src={project.image}
                       alt={project.name}
-                      fill
-                      className="object-cover"
+                      className="w-full h-full rounded-lg object-cover"
                     />
                   </div>
                 </div>

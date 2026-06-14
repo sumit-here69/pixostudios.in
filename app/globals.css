@@ -26,8 +26,7 @@
   --color-accent: var(--accent);
   --color-accent-hover: var(--accent-hover);
   --color-accent-light: var(--accent-light);
-  --font-sans: var(--font-dm-sans);
-  --font-serif: var(--font-serif);
+  --font-sans: var(--font-plus-jakarta);
 }
 
 html {
@@ -37,14 +36,18 @@ html {
 body {
   background: var(--bg);
   color: var(--text-primary);
-  font-family: var(--font-sans, "DM Sans", system-ui, sans-serif);
+  font-family: var(--font-sans, "Plus Jakarta Sans", system-ui, sans-serif);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-dm-sans), "DM Sans", system-ui, sans-serif;
+}
+
 ::selection {
-  background: var(--accent);
-  color: white;
+  background: #fde8db;
+  color: #3d1e0a;
 }
 
 /* ─── Inset container — recessed panel (these classes are detected by Tailwind) ─── */
@@ -78,17 +81,17 @@ body {
 .section-badge::after {
   content: "";
   display: inline-block;
-  width: 0;
-  height: 0;
-  border-style: solid;
+  width: 9px;
+  height: 15px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 .section-badge::before {
-  border-width: 4px 6px 4px 0;
-  border-color: transparent var(--text-secondary) transparent transparent;
+  background-image: url("/framer/F8wan4JxRuiIlSJe5tqI0wnJhM.svg");
 }
 .section-badge::after {
-  border-width: 4px 0 4px 6px;
-  border-color: transparent transparent transparent var(--text-secondary);
+  background-image: url("/framer/T2mfWqIsv4Kpdf5hFk22cxmmg78.svg");
 }
 
 /* ─── Floating card ─── */

@@ -108,29 +108,36 @@ export const PROCESS_STEPS = [
     number: "01",
     title: "Discovery",
     description:
-      "We learn your business, audience, and goals. Strategy, positioning, research.",
-    tags: ["Research", "Strategy", "Positioning"],
+      "We learn your business, audience, and goals through in-depth research and strategic analysis.",
+    tags: ["Research", "Strategy", "Analysis"],
   },
   {
     number: "02",
     title: "Design",
     description:
-      "Wireframes, mockups, and visual direction. You approve before we build.",
-    tags: ["UI/UX", "Visual Identity", "Mockups"],
+      "We craft intuitive interfaces and cohesive visuals that elevate the user experience.",
+    tags: ["UI Design", "UX Design", "Visual System"],
   },
   {
     number: "03",
     title: "Development",
     description:
-      "Clean code, modern stack. Built for speed, SEO, and scale.",
-    tags: ["Next.js", "React", "Framer"],
+      "We build fast, scalable solutions using modern technology and clean code practices.",
+    tags: ["Next.js", "React", "Tailwind"],
   },
   {
     number: "04",
+    title: "Implementation",
+    description:
+      "We integrate solutions smoothly into workflows to ensure efficiency and adoption.",
+    tags: ["Setup", "Configuration", "Automation"],
+  },
+  {
+    number: "05",
     title: "Launch & Support",
     description:
-      "We deploy, monitor, and keep things running. 30 days free support included.",
-    tags: ["Deployment", "QA", "Maintenance"],
+      "We deploy, monitor, and provide ongoing support to keep everything running smoothly.",
+    tags: ["Deployment", "QA", "Support"],
   },
 ];
 
@@ -172,24 +179,45 @@ export const PRICING = [
 export const TESTIMONIALS = [
   {
     quote:
-      "Working with this team was effortless that they understood our brand vision & turned it into a digital experience that truly represents who we are.",
-    name: "Olivia Carter",
-    role: "Brand Director",
-    avatar: "/framer/4RGuWhw5VjbAJbMonewftyJZ4c.jpg",
+      "Working with this team was effortless. They understood our brand vision and turned it into a digital experience that truly represents who we are.",
+    name: "Sarah Mitchell",
+    role: "Brand Director, Lumina Co.",
+    avatar: "/framer/avatar-sarah.jpg",
   },
   {
     quote:
       "They translated our ideas into a clean, modern digital presence that feels exactly right for our brand.",
-    name: "Ethan Miller",
-    role: "Director",
-    avatar: "/framer/54rgdyHlT5jTLB1jlx1W7jdkRbE.jpg",
+    name: "James Chen",
+    role: "CEO, NovaTech",
+    avatar: "/framer/avatar-james.jpg",
   },
   {
     quote:
       "The team instantly understood our vision and delivered a seamless experience that exceeded every expectation.",
-    name: "Sophia Reyes",
-    role: "Creative Lead",
-    avatar: "/framer/5O8P63EQwkFO1m5OTR4jsw7hI8.jpg",
+    name: "Priya Sharma",
+    role: "Creative Lead, Artisan Studio",
+    avatar: "/framer/avatar-priya.jpg",
+  },
+  {
+    quote:
+      "From concept to launch in under two weeks. The quality of design and attention to detail was remarkable.",
+    name: "David Park",
+    role: "Founder, GreenLeaf",
+    avatar: "/framer/avatar-david.jpg",
+  },
+  {
+    quote:
+      "Our conversion rate doubled after the redesign. They don't just design pretty pages, they design for results.",
+    name: "Emma Rodriguez",
+    role: "Marketing Head, Bloom Health",
+    avatar: "/framer/avatar-emma.jpg",
+  },
+  {
+    quote:
+      "Best agency experience we've had. Clear communication, fast delivery, and a product that speaks for itself.",
+    name: "Michael Torres",
+    role: "COO, UrbanNest",
+    avatar: "/framer/avatar-michael.jpg",
   },
 ];
 
@@ -224,10 +252,10 @@ export const INDUSTRIES = [
   "E-Commerce & D2C",
   "SaaS & Technology",
   "Food & Restaurants",
-  "Healthcare & Wellness",
   "Real Estate",
+  "Education",
+  "Healthcare & Wellness",
   "Fashion & Beauty",
-  "Education & Learning",
   "Coaching & Services",
 ];
 
