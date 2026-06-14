@@ -25,8 +25,8 @@ export default function Comparison() {
             <span className="text-accent">to compare</span> how
             <br />
             we work{" "}
-            <span className="inline-flex items-center w-[50px] h-[24px] top-0.5 bg-primary rounded-full mx-1 relative">
-              <span className="absolute right-[3px] w-[16px] h-[16px] bg-white rounded-full" />
+            <span className="inline-flex items-center w-[45px] h-[24px] top-0.5 bg-primary rounded-full mx-1 relative">
+              <span className="absolute right-[3px] w-[18px] h-[18px] bg-white rounded-full" />
             </span>{" "}
             versus what you usually
             <br />
@@ -36,34 +36,43 @@ export default function Comparison() {
         </div>
 
         <InsetPanel>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-0 rounded-[16px] overflow-hidden bg-white">
-            <div className="p-8 lg:p-10" style={{ minHeight: "300px" }}>
-              <h3 className="text-[18px] font-semibold text-primary mb-6">Other agencies</h3>
-              <ul className="space-y-4">
-                {COMPARISON.others.map((item, i) => (
-                  <li key={i} className="flex items-start gap-3 text-[15px] text-secondary">
-                    <svg width="6" height="10" viewBox="0 0 6 10" className="mt-1.5 shrink-0 opacity-40">
-                      <path d="M1 1l4 4-4 4" stroke="currentColor" strokeWidth="1.5" fill="none" strokeLinecap="round" />
-                    </svg>
-                    {item}
-                  </li>
-                ))}
-              </ul>
+          <div className="grid grid-cols-[1fr_1fr] rounded-[16px] overflow-hidden bg-white">
+            {/* Header row */}
+            <div className="p-6 pb-5 lg:px-10 lg:pt-8 lg:pb-6">
+              <h3 className="text-[18px] lg:text-[20px] font-semibold text-primary">Other agencies</h3>
+            </div>
+            <div className="bg-[#ff8c42] p-6 pb-5 lg:px-10 lg:pt-8 lg:pb-6 rounded-t-[16px]">
+              <h3 className="text-[18px] lg:text-[20px] font-semibold text-primary">{STUDIO_NAME}</h3>
             </div>
 
-            <div className="bg-accent p-8 lg:p-10 rounded-[16px]" style={{ minHeight: "300px" }}>
-              <h3 className="text-[18px] font-bold text-white mb-6">{STUDIO_NAME}</h3>
-              <ul className="space-y-4">
-                {COMPARISON.pixo.map((item, i) => (
-                  <li key={i} className="flex items-start gap-3 text-[15px] font-medium text-white">
-                    <svg width="6" height="10" viewBox="0 0 6 10" className="mt-1.5 shrink-0 opacity-70">
-                      <path d="M1 1l4 4-4 4" stroke="currentColor" strokeWidth="1.5" fill="none" strokeLinecap="round" />
-                    </svg>
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </div>
+            {/* Comparison rows with dotted separators */}
+            {COMPARISON.others.map((other, i) => (
+              <div key={i} className="contents">
+                <div
+                  className="flex items-center gap-3 px-6 lg:px-10 py-5"
+                  style={{
+                    borderTop: "1.5px dashed #d4d0cb",
+                  }}
+                >
+                  <svg width="6" height="10" viewBox="0 0 6 10" className="shrink-0 opacity-40">
+                    <path d="M1 1l4 4-4 4" stroke="currentColor" strokeWidth="1.5" fill="none" strokeLinecap="round" />
+                  </svg>
+                  <span className="text-[15px] text-secondary">{other}</span>
+                </div>
+                <div
+                  className="bg-[#ff8c42] flex items-center gap-3 px-6 lg:px-10 py-5"
+                  style={{
+                    borderTop: "1.5px dashed rgba(0,0,0,0.15)",
+                    ...(i === COMPARISON.others.length - 1 ? { borderRadius: "0 0 16px 16px" } : {}),
+                  }}
+                >
+                  <svg width="6" height="10" viewBox="0 0 6 10" className="shrink-0 opacity-60">
+                    <path d="M1 1l4 4-4 4" stroke="#000" strokeWidth="1.5" fill="none" strokeLinecap="round" />
+                  </svg>
+                  <span className="text-[15px] font-medium text-primary">{COMPARISON.pixo[i]}</span>
+                </div>
+              </div>
+            ))}
           </div>
         </InsetPanel>
 
