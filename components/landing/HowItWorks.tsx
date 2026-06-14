@@ -119,7 +119,7 @@ export default function HowItWorks() {
                     key={i}
                     className={`rounded-[16px] p-6 transition-all duration-700 ${
                       i === active
-                        ? "bg-white shadow-[0_4px_24px_rgba(6,6,18,0.08)] scale-100 opacity-100"
+                        ? "bg-white  scale-100 opacity-100"
                         : i < active
                         ? "bg-transparent opacity-40 scale-95"
                         : "bg-transparent opacity-25 scale-95"
@@ -154,7 +154,7 @@ export default function HowItWorks() {
                   key={i}
                   className={`rounded-[16px] p-6 transition-all duration-500 flex gap-4 items-start ${
                     i === active
-                      ? "bg-white shadow-[0_4px_24px_rgba(6,6,18,0.08)]"
+                      ? "bg-white "
                       : i < active
                       ? "opacity-50"
                       : "opacity-30"

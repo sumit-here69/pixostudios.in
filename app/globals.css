@@ -94,10 +94,15 @@ body {
 /* ─── Floating card ─── */
 .floating-card {
   background: white;
-  border: 1px solid var(--border-dark);
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(6, 6, 18, 0.06);
   padding: 6px;
+}
+
+/* ─── Remove outlines from interactive elements ─── */
+button:focus-visible,
+a:focus-visible {
+  outline: none;
 }
 
 /* ─── Concentric arcs background ─── */
@@ -108,22 +113,10 @@ body {
   content: "";
   position: absolute;
   inset: 0;
-  background:
-    radial-gradient(circle at 50% 110%, transparent 30%, transparent 30%),
-    repeating-radial-gradient(
-      circle at 50% 110%,
-      transparent 0px,
-      transparent 118px,
-      #e5e2df 118px,
-      #e5e2df 119px,
-      transparent 119px,
-      transparent 240px,
-      #e5e2df 240px,
-      #e5e2df 241px
-    );
+  background-image: radial-gradient(circle, rgba(6,6,18,0.045) 1px, transparent 1px);
+  background-size: 28px 28px;
   pointer-events: none;
   z-index: 0;
-  opacity: 1;
 }
 
 /* ─── Animations ─── */

@@ -131,14 +131,6 @@ export default function Hero() {
         </div>
       </div>
 
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 animate-fade-in-up" style={{ animationDelay: "0.8s" }}>
-        <div
-          className="w-7 h-11 rounded-full border-2 border-primary/30 flex justify-center pt-2"
-          style={{ animation: "float 2s ease-in-out infinite" }}
-        >
-          <div className="w-1.5 h-3 rounded-full bg-accent/60" />
-        </div>
-      </div>
     </section>
   );
 }

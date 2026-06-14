@@ -15,7 +15,7 @@ export default function PortfolioShowcase() {
   ];
 
   return (
-    <section className="relative py-12 overflow-hidden concentric-bg" style={{ minHeight: "680px" }}>
+    <section className="relative py-12 overflow-hidden" style={{ minHeight: "680px" }}>
       {images.map((img, i) => (
         <div
           key={i}

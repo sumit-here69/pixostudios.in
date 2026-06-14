@@ -28,8 +28,8 @@ export default function Comparison() {
         </div>
 
         <InsetPanel>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-0 rounded-[16px] overflow-hidden">
-            <div className="bg-white p-10 lg:p-12 shadow-[inset_0_1px_1px_rgba(6,6,18,0.18)]" style={{ minHeight: "340px" }}>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-0 rounded-[16px] overflow-hidden bg-white">
+            <div className="p-10 lg:p-12" style={{ minHeight: "340px" }}>
               <h3 className="text-[20px] font-semibold text-primary mb-8">Other agencies</h3>
               <ul className="space-y-5">
                 {COMPARISON.others.map((item, i) => (
@@ -43,7 +43,7 @@ export default function Comparison() {
               </ul>
             </div>
 
-            <div className="bg-[#ff8c42] p-10 lg:p-12 rounded-[16px]" style={{ minHeight: "340px" }}>
+            <div className="bg-[#ff8c42] p-10 lg:p-12" style={{ minHeight: "340px" }}>
               <h3 className="text-[20px] font-semibold text-primary mb-8">{STUDIO_NAME}</h3>
               <ul className="space-y-5">
                 {COMPARISON.pixo.map((item, i) => (

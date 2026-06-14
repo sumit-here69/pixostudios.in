@@ -30,17 +30,11 @@ function AccordionItem({ index, q, a }: { index: number; q: string; a: string })
   );
 }
 
-const AVATAR_COLORS = ["#FFD4B8", "#B8D8FF", "#D4B8FF"];
-
-function PersonAvatar({ color }: { color: string }) {
-  return (
-    <svg width="36" height="36" viewBox="0 0 100 100" className="rounded-full">
-      <circle cx="50" cy="50" r="50" fill={color} />
-      <circle cx="50" cy="38" r="16" fill="white" opacity="0.6" />
-      <ellipse cx="50" cy="72" rx="22" ry="16" fill="white" opacity="0.6" />
-    </svg>
-  );
-}
+const AVATAR_IMAGES = [
+  "/framer/4RGuWhw5VjbAJbMonewftyJZ4c.jpg",
+  "/framer/54rgdyHlT5jTLB1jlx1W7jdkRbE.jpg",
+  "/framer/5O8P63EQwkFO1m5OTR4jsw7hI8.jpg",
+];
 
 export default function FAQ() {
   return (
@@ -63,7 +57,7 @@ export default function FAQ() {
         </div>
 
         <InsetPanel>
-          <div className="bg-white rounded-[16px] shadow-[inset_0_1px_1px_rgba(6,6,18,0.18)] overflow-hidden">
+          <div className="bg-white rounded-[16px] overflow-hidden">
             {FAQ_DATA.map((item, i) => (
               <AccordionItem key={i} index={i + 1} q={item.q} a={item.a} />
             ))}
@@ -72,9 +66,10 @@ export default function FAQ() {
 
         <div className="text-center mt-10">
           <div className="flex items-center justify-center gap-0">
-            {AVATAR_COLORS.map((color, i) => (
-              <div key={i} className="-ml-2 first:ml-0 ring-2 ring-[var(--bg)] rounded-full">
-                <PersonAvatar color={color} />
+            {AVATAR_IMAGES.map((src, i) => (
+              <div key={i} className="-ml-2 first:ml-0 ring-2 ring-bg rounded-full">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src={src} alt="" width={36} height={36} className="w-9 h-9 rounded-full object-cover" />
               </div>
             ))}
           </div>

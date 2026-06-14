@@ -3,10 +3,10 @@
 import { ReactNode } from "react";
 
 /* ─── Shared style constants (change here → changes everywhere) ─── */
-const CARD_CLASSES = "bg-white rounded-[16px] shadow-[inset_0_1px_1px_rgba(6,6,18,0.18)]";
+const CARD_CLASSES = "bg-white rounded-[16px]";
 const ACCENT_BTN_CLASSES = "inline-flex items-center justify-center h-[48px] px-7 rounded-[8px] bg-accent text-white text-[15px] font-semibold hover:bg-accent-hover transition-colors shadow-[0_0_0_1px_rgb(207,78,23),inset_0_1.4px_1px_rgba(255,255,255,0.08),0_1.4px_4px_rgba(6,6,18,0.3)]";
 const TAG_PILL_CLASSES = "px-4 py-2 rounded-full border border-border text-[13px] font-medium text-secondary uppercase tracking-wider";
-const NAV_ARROW_CLASSES = "w-11 h-11 rounded-full border border-border bg-white flex items-center justify-center hover:border-primary transition-colors cursor-pointer";
+const NAV_ARROW_CLASSES = "w-11 h-11 rounded-full bg-white flex items-center justify-center transition-colors cursor-pointer outline-none";
 
 export { CARD_CLASSES, TAG_PILL_CLASSES };
 
