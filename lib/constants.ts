@@ -4,12 +4,13 @@ export const STUDIO_EMAIL = "pixostudios.in@gmail.com";
 export const STUDIO_PHONE = "+91 63989 35305";
 export const STUDIO_CAL = "https://cal.com/pixo-studios/30min";
 export const STUDIO_DOMAIN = "pixostudios.in";
+export const STUDIO_LINKEDIN = "https://www.linkedin.com/company/pixostudios";
+export const STUDIO_INSTAGRAM = "https://www.instagram.com/pixostudios.in";
 
 export const NAV_LINKS = [
   { label: "About us", href: "#about" },
   { label: "Projects", href: "#projects" },
   { label: "Services", href: "#services" },
-  { label: "Contact", href: "#contact" },
 ];
 
 export const SERVICES = [
@@ -180,14 +181,14 @@ export const TESTIMONIALS = [
   {
     quote:
       "Working with this team was effortless. They understood our brand vision and turned it into a digital experience that truly represents who we are.",
-    name: "Sarah Mitchell",
-    role: "Brand Director, Lumina Co.",
+    name: "Ananya Kapoor",
+    role: "Founder, Lumina Co.",
     avatar: "/framer/avatar-sarah.jpg",
   },
   {
     quote:
       "They translated our ideas into a clean, modern digital presence that feels exactly right for our brand.",
-    name: "James Chen",
+    name: "Vikram Mehta",
     role: "CEO, NovaTech",
     avatar: "/framer/avatar-james.jpg",
   },
@@ -201,21 +202,21 @@ export const TESTIMONIALS = [
   {
     quote:
       "From concept to launch in under two weeks. The quality of design and attention to detail was remarkable.",
-    name: "David Park",
+    name: "Rohan Desai",
     role: "Founder, GreenLeaf",
     avatar: "/framer/avatar-david.jpg",
   },
   {
     quote:
       "Our conversion rate doubled after the redesign. They don't just design pretty pages, they design for results.",
-    name: "Emma Rodriguez",
+    name: "Neha Agarwal",
     role: "Marketing Head, Bloom Health",
     avatar: "/framer/avatar-emma.jpg",
   },
   {
     quote:
       "Best agency experience we've had. Clear communication, fast delivery, and a product that speaks for itself.",
-    name: "Michael Torres",
+    name: "Arjun Malhotra",
     role: "COO, UrbanNest",
     avatar: "/framer/avatar-michael.jpg",
   },
@@ -240,7 +241,7 @@ export const FAQ_DATA = [
   },
   {
     q: "How do we start a project?",
-    a: "Book a free 15-minute call. We'll discuss your goals, timeline, and budget. If we're a fit, we send a proposal within 24 hours.",
+    a: "Book a free 30-minute call. We'll discuss your goals, timeline, and budget. If we're a fit, we send a proposal within 24 hours.",
   },
   {
     q: "Can you help with ongoing updates after launch?",

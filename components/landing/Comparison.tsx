@@ -4,9 +4,7 @@ import { COMPARISON, STUDIO_NAME } from "@/lib/constants";
 import { InsetPanel, AccentButton } from "@/components/ui/shared";
 
 const AVATAR_IMAGES = [
-  "/framer/avatar-sarah.jpg",
-  "/framer/avatar-james.jpg",
-  "/framer/avatar-priya.jpg",
+  "/framer/avatar-sumit.jpg",
 ];
 
 export default function Comparison() {
@@ -81,32 +79,18 @@ export default function Comparison() {
             Read our story
           </AccentButton>
 
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-3">
             <div className="flex items-center">
               {AVATAR_IMAGES.map((src, i) => (
-                <div key={i} className="-ml-2 first:ml-0 ring-2 ring-bg rounded-full">
+                <div key={i} className="ring-2 ring-bg rounded-full">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img src={src} alt="" width={36} height={36} className="w-9 h-9 rounded-full object-cover" />
                 </div>
               ))}
-              <div className="-ml-2 w-9 h-9 rounded-full bg-primary text-white text-[11px] font-semibold flex items-center justify-center ring-2 ring-bg">
-                +54
-              </div>
             </div>
-
-            <div>
-              <div className="flex items-center gap-1">
-                {[...Array(5)].map((_, i) => (
-                  <svg key={i} width="14" height="14" viewBox="0 0 14 14" fill="#ff6321">
-                    <path d="M7 1l1.76 3.57 3.94.57-2.85 2.78.67 3.93L7 10.07l-3.52 1.78.67-3.93L1.3 5.14l3.94-.57z" />
-                  </svg>
-                ))}
-                <span className="text-[14px] font-semibold text-primary ml-1">4.9/5</span>
-              </div>
-              <p className="text-[13px] text-secondary">
-                Trusted by <span className="text-accent font-medium">54+</span> visionary brands
-              </p>
-            </div>
+            <p className="text-[13px] text-secondary">
+              Worked with <span className="text-accent font-medium">visionary brands</span>
+            </p>
           </div>
         </div>
       </div>

@@ -1,7 +1,7 @@
 "use client";
 
 import { useRef } from "react";
-import { PROJECTS } from "@/lib/constants";
+import { PROJECTS, STUDIO_CAL } from "@/lib/constants";
 import { SectionHeader, InsetPanel, NavArrows, AccentButton } from "@/components/ui/shared";
 
 export default function Portfolio() {
@@ -52,7 +52,7 @@ export default function Portfolio() {
                       <p className="text-[15px] md:text-[17px] text-secondary leading-relaxed mb-6">
                         {project.description}
                       </p>
-                      <AccentButton href="#contact" className="w-fit">
+                      <AccentButton href={STUDIO_CAL} external className="w-fit">
                         View project detail
                       </AccentButton>
                     </div>

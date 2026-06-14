@@ -23,7 +23,7 @@ export default function Navbar() {
     { label: "About us", href: "#about" },
     { label: "Projects", href: "#projects" },
     { label: "Services", href: "#services" },
-    { label: "Contact", href: "#contact" },
+    { label: "Contact", href: STUDIO_CAL, external: true },
   ];
 
   return (
@@ -60,6 +60,7 @@ export default function Navbar() {
               key={link.label}
               href={link.href}
               onClick={() => setOpen(false)}
+              {...(link.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
               className="block py-2.5 text-[16px] font-medium text-secondary hover:text-primary transition-colors"
             >
               {link.label}

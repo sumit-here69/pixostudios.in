@@ -52,7 +52,7 @@ export default function BentoGrid() {
             </div>
 
             {/* Row 2 */}
-            <div className="bg-accent rounded-[16px] p-6 flex flex-col">
+            <div className="bg-[#ff8c42] rounded-[16px] p-6 flex flex-col">
               <h4 className="text-[18px] font-semibold text-primary mb-2">Discuss your project</h4>
               <a
                 href={STUDIO_CAL}
@@ -60,7 +60,7 @@ export default function BentoGrid() {
                 rel="noopener noreferrer"
                 className="inline-flex h-[36px] items-center px-5 rounded-[8px] bg-white text-accent text-[13px] font-semibold hover:bg-white/90 transition-colors w-fit mb-4"
               >
-                Schedule a call · 15 mins free
+                Schedule a call · 30 mins free
               </a>
               <p className="text-[13px] text-primary/50 mb-4">No pressure, just a thoughtful chat.</p>
               <div className="mt-auto flex items-center gap-2">

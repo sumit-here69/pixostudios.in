@@ -58,7 +58,7 @@ export default function CTABanner() {
                       </div>
                     </div>
                     <h4 className="text-[17px] font-semibold text-primary mb-1">
-                      Quick 15-minute call
+                      Quick 30-minute call
                     </h4>
                     <p className="text-[14px] text-secondary mb-4">
                       Pick a time that works for you.

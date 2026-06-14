@@ -84,7 +84,7 @@ export default function Pricing() {
           <p className="text-[14px] text-secondary mb-2">
             For startups and businesses needing full product development.
           </p>
-          <a href="#contact" className="text-[14px] font-semibold text-primary hover:text-accent transition-colors">
+          <a href={STUDIO_CAL} target="_blank" rel="noopener noreferrer" className="text-[14px] font-semibold text-primary hover:text-accent transition-colors">
             Contact us &rarr;
           </a>
         </div>

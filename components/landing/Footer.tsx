@@ -1,8 +1,15 @@
 "use client";
 
+import { useState } from "react";
 import Image from "next/image";
-import { STUDIO_SHORT, STUDIO_EMAIL, STUDIO_PHONE } from "@/lib/constants";
+import { STUDIO_SHORT, STUDIO_EMAIL, STUDIO_PHONE, STUDIO_CAL, STUDIO_LINKEDIN, STUDIO_INSTAGRAM } from "@/lib/constants";
 import CTABanner from "./CTABanner";
+
+const SOCIAL_LINKS: Record<string, string> = {
+  Instagram: STUDIO_INSTAGRAM,
+  LinkedIn: STUDIO_LINKEDIN,
+  X: "#",
+};
 
 const QUICK_LINKS = [
   { label: "Home", href: "/" },
@@ -12,6 +19,15 @@ const QUICK_LINKS = [
 ];
 
 export default function Footer() {
+  const [email, setEmail] = useState("");
+
+  const handleNewsletterSubmit = () => {
+    if (!email) return;
+    const calUrl = `${STUDIO_CAL}?email=${encodeURIComponent(email)}`;
+    window.open(calUrl, "_blank", "noopener,noreferrer");
+    setEmail("");
+  };
+
   return (
     <footer className="bg-bg relative z-10">
       <CTABanner />
@@ -33,9 +49,15 @@ export default function Footer() {
               <input
                 type="email"
                 placeholder="Enter your email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                onKeyDown={(e) => e.key === "Enter" && handleNewsletterSubmit()}
                 className="flex-1 h-[42px] px-4 rounded-[8px] border border-border text-[14px] text-primary placeholder:text-secondary/50 outline-none focus:border-accent transition-colors bg-surface"
               />
-              <button className="w-[42px] h-[42px] rounded-[8px] bg-accent text-white flex items-center justify-center hover:bg-accent-hover transition-colors shrink-0">
+              <button
+                onClick={handleNewsletterSubmit}
+                className="w-[42px] h-[42px] rounded-[8px] bg-accent text-white flex items-center justify-center hover:bg-accent-hover transition-colors shrink-0"
+              >
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
                   <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
@@ -74,7 +96,9 @@ export default function Footer() {
                   {["Instagram", "LinkedIn", "X"].map((platform) => (
                     <a
                       key={platform}
-                      href="#"
+                      href={SOCIAL_LINKS[platform]}
+                      target={SOCIAL_LINKS[platform] !== "#" ? "_blank" : undefined}
+                      rel={SOCIAL_LINKS[platform] !== "#" ? "noopener noreferrer" : undefined}
                       className="w-11 h-11 rounded-full bg-primary flex items-center justify-center hover:bg-accent transition-colors"
                       aria-label={platform}
                     >
