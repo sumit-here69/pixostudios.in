@@ -67,40 +67,31 @@ export const SERVICES = [
 
 export const PROJECTS = [
   {
-    name: "Brew & Bean",
-    industry: "Food & Beverage",
+    name: "VERGE",
+    industry: "E-Commerce & D2C",
     scope: "Brand Identity + Website",
     description:
-      "Complete digital identity for a specialty coffee brand. Conversion-focused website with online ordering and brand-driven homepage.",
-    image: "/framer/FFHEfZV9GVwc9HziR2BNgXekq5g.jpg",
-    sideImage: "/framer/lNE1sUbqwHFCb5UOH9OnWTyekyE.jpg",
+      "Premium poster studio with curated anime, automotive, and custom collections. Full e-commerce build with custom poster designer and brand identity.",
+    image: "/framer/project-verge.png",
+    link: "https://verge-sooty.vercel.app/",
   },
   {
-    name: "VitalPath",
-    industry: "Health & Wellness",
-    scope: "Product Design + Development",
-    description:
-      "Patient portal with appointment booking, health records, and telehealth integration for a modern wellness platform.",
-    image: "/framer/CYC5VQ0ZcK8uEE5jBbm51FTJq0.jpg",
-    sideImage: "/framer/GrE60ZN8LxGjY61TLrDHi0y3iU.jpg",
-  },
-  {
-    name: "UrbanNest",
-    industry: "Real Estate",
-    scope: "Website Design + Brand Refresh",
-    description:
-      "Premium property listing platform with virtual tours and smart search, unified brand and service experience.",
-    image: "/framer/7G0MnVC3wxymrUw1Jtt6fPXRy30.jpg",
-    sideImage: "/framer/Gw2uTivgvCkhc4dSxTHmfxTLyYU.jpg",
-  },
-  {
-    name: "GlowLab",
-    industry: "Beauty & Skincare",
+    name: "KLOVE KICKS",
+    industry: "E-Commerce & D2C",
     scope: "E-Commerce + Brand Identity",
     description:
-      "D2C skincare brand with subscription model. Elevated portfolio design to showcase craftsmanship with greater clarity and visual impact.",
-    image: "/framer/VJNWBeLoIV2o2VLFqAYQN34EDlE.jpg",
-    sideImage: "/framer/fQQPHGXKTYJhKBvphhxj1nBfFo.jpg",
+      "Authentic sneaker marketplace with brand-wise browsing, product showcase, and seamless checkout. Built for trust and conversion.",
+    image: "/framer/project-klovekicks.png",
+    link: "https://klovekicksss.vercel.app/",
+  },
+  {
+    name: "ALAT",
+    industry: "Corporate & Industrial",
+    scope: "Website Redesign",
+    description:
+      "Corporate website for a global manufacturing hub. Clean, professional design with strategic messaging and industry-focused content.",
+    image: "/framer/project-alat.png",
+    link: "#",
   },
 ];
 

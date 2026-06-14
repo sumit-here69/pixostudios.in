@@ -52,8 +52,8 @@ export default function Portfolio() {
                       <p className="text-[15px] md:text-[17px] text-secondary leading-relaxed mb-6">
                         {project.description}
                       </p>
-                      <AccentButton href={STUDIO_CAL} external className="w-fit">
-                        View project detail
+                      <AccentButton href={project.link && project.link !== "#" ? project.link : STUDIO_CAL} external className="w-fit">
+                        {project.link && project.link !== "#" ? "View live site" : "View project detail"}
                       </AccentButton>
                     </div>
                   </div>
