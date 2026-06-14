@@ -2,7 +2,6 @@ import Navbar from "@/components/landing/Navbar";
 import Hero from "@/components/landing/Hero";
 import PortfolioShowcase from "@/components/landing/SocialProof";
 import Comparison from "@/components/landing/Comparison";
-import BentoGrid from "@/components/landing/BentoGrid";
 import Services from "@/components/landing/Services";
 import Portfolio from "@/components/landing/Portfolio";
 import HowItWorks from "@/components/landing/HowItWorks";
@@ -19,7 +18,6 @@ export default function Home() {
       <main>
         <Hero />
         <Comparison />
-        <BentoGrid />
         <Services />
         <Portfolio />
         <HowItWorks />

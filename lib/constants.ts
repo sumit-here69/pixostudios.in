@@ -135,33 +135,35 @@ export const PROCESS_STEPS = [
 
 export const PRICING = [
   {
-    tier: "Starter",
-    price: "₹25,000",
+    tier: "Design",
+    price: "$499",
     period: "/ project",
     description:
-      "Perfect for startups and small teams launching their first project.",
+      "Websites, e-commerce stores, WhatsApp automation, and UI revamps.",
     features: [
-      "1 Landing Page Design",
-      "Basic Brand Guidelines",
+      "Landing Page or Multi-page Website",
+      "E-Commerce Store with Payments",
+      "WhatsApp Chatbot & Automation",
       "Mobile Responsive Layout",
+      "Brand Guidelines",
       "2 Revisions",
-      "Delivery in 7 days",
     ],
     cta: "Get started now",
     popular: false,
   },
   {
-    tier: "Growth",
-    price: "₹75,000",
+    tier: "Product",
+    price: "$999",
     period: "/ project",
     description:
-      "Best for growing brands looking to scale their digital presence.",
+      "Full-stack MVPs, AI-native solutions, and complex product builds.",
     features: [
-      "Multi-page Website Design",
-      "Brand Strategy Session",
-      "Web Animations & Interactions",
+      "MVP Development (Full-Stack)",
+      "AI-Native Solutions & Chatbots",
+      "Custom Dashboards & CRMs",
+      "Product Redesign & Migration",
       "4 Revisions",
-      "Delivery in 14 days",
+      "Delivery in 14-21 days",
     ],
     cta: "Start your project",
     popular: true,
