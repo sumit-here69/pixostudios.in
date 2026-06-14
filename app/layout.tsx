@@ -29,6 +29,10 @@ export const metadata: Metadata = {
     "website development India",
     "premium design studio",
   ],
+  icons: {
+    icon: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
+  },
   openGraph: {
     title: "Pixo Studios — Premium Design & Development Studio",
     description:
