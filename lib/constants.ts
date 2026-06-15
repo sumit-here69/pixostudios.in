@@ -8,7 +8,6 @@ export const STUDIO_LINKEDIN = "https://www.linkedin.com/company/pixostudios";
 export const STUDIO_INSTAGRAM = "https://www.instagram.com/pixostudios.in";
 
 export const NAV_LINKS = [
-  { label: "About us", href: "#about" },
   { label: "Projects", href: "#projects" },
   { label: "Services", href: "#services" },
 ];
@@ -46,7 +45,7 @@ export const SERVICES = [
     title: "MVP Development",
     description:
       "Full-stack web applications with user auth, payments, admin panel, cloud deployment, and CI/CD setup for funded startups.",
-    tags: ["Full-Stack", "Startups", "Products"],
+    tags: ["Full-Stack", "Startups", "CRMs"],
     icon: "/framer/JCDk8i61Ec1N2laCFRxqdUPv0sM.svg",
   },
   {

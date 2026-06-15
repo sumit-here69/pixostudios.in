@@ -2,18 +2,17 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import { STUDIO_SHORT, STUDIO_EMAIL, STUDIO_PHONE, STUDIO_CAL, STUDIO_LINKEDIN, STUDIO_INSTAGRAM } from "@/lib/constants";
+import { STUDIO_SHORT, STUDIO_EMAIL, STUDIO_PHONE, STUDIO_CAL, STUDIO_LINKEDIN, STUDIO_INSTAGRAM, STUDIO_NAME } from "@/lib/constants";
 import CTABanner from "./CTABanner";
 
 const SOCIAL_LINKS: Record<string, string> = {
   Instagram: STUDIO_INSTAGRAM,
   LinkedIn: STUDIO_LINKEDIN,
-  X: "#",
+  X: STUDIO_LINKEDIN,
 };
 
 const QUICK_LINKS = [
   { label: "Home", href: "/" },
-  { label: "About us", href: "#about" },
   { label: "Projects", href: "#projects" },
   { label: "Services", href: "#services" },
 ];
@@ -37,7 +36,7 @@ export default function Footer() {
           <div>
             <a href="/" className="flex items-center gap-2.5 mb-5">
               <Image src="/logo.png" alt="Pixo" width={28} height={28} />
-              <span className="text-[20px] font-bold text-primary">{STUDIO_SHORT}</span>
+              <span className="text-[20px] font-bold text-primary">{STUDIO_NAME}</span>
             </a>
             <p className="text-[15px] text-secondary leading-relaxed mb-6">
               Premium digital experiences for ambitious brands.
@@ -136,7 +135,9 @@ export default function Footer() {
               {["Instagram", "LinkedIn", "X"].map((platform) => (
                 <a
                   key={platform}
-                  href="#"
+                  href={SOCIAL_LINKS[platform]}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="w-11 h-11 rounded-full bg-primary flex items-center justify-center hover:bg-accent transition-colors"
                   aria-label={platform}
                 >

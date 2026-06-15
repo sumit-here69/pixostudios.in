@@ -20,7 +20,6 @@ export default function Navbar() {
   }, [open]);
 
   const NAV_ITEMS = [
-    { label: "About us", href: "#about" },
     { label: "Projects", href: "#projects" },
     { label: "Services", href: "#services" },
     { label: "Contact", href: STUDIO_CAL, external: true },
