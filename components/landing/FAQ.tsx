@@ -8,25 +8,36 @@ function AccordionItem({ index, q, a }: { index: number; q: string; a: string })
   const [open, setOpen] = useState(false);
 
   return (
-    <button
+    <div
+      className="w-full flex items-start gap-4 text-left py-5 px-6 border-b border-border last:border-b-0 hover:bg-[#faf9f8] transition-colors cursor-pointer"
       onClick={() => setOpen(!open)}
-      className="w-full flex items-start gap-4 text-left py-5 px-6 border-b border-border last:border-b-0 hover:bg-[#faf9f8] transition-colors"
+      role="button"
+      tabIndex={0}
+      onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") setOpen(!open); }}
+      itemScope
+      itemProp="mainEntity"
+      itemType="https://schema.org/Question"
     >
-      <span className="text-[15px] text-secondary shrink-0 mt-1">{index}.</span>
+      <span className="text-[15px] text-secondary shrink-0 mt-1" aria-hidden="true">{index}.</span>
       <div className="flex-1">
         <div className="flex items-center justify-between gap-4">
-          <span className="text-[16px] sm:text-[17px] font-medium text-primary leading-snug">{q}</span>
-          <div className={`w-6 h-6 rounded-full bg-primary flex items-center justify-center shrink-0 transition-transform ${open ? "rotate-45" : ""}`}>
+          <h3 className="text-[16px] sm:text-[17px] font-medium text-primary leading-snug" itemProp="name">{q}</h3>
+          <div className={`w-6 h-6 rounded-full bg-primary flex items-center justify-center shrink-0 transition-transform ${open ? "rotate-45" : ""}`} aria-hidden="true">
             <svg width="12" height="12" viewBox="0 0 10 10" fill="none">
               <path d="M5 1v8M1 5h8" stroke="white" strokeWidth="1.5" strokeLinecap="round" />
             </svg>
           </div>
         </div>
-        <div className={`overflow-hidden transition-all duration-300 ${open ? "max-h-60 mt-4" : "max-h-0"}`}>
-          <p className="text-[14px] text-primary/70 leading-[1.7] pr-6">{a}</p>
+        <div
+          className={`overflow-hidden transition-all duration-300 ${open ? "max-h-60 mt-4" : "max-h-0"}`}
+          itemScope
+          itemProp="acceptedAnswer"
+          itemType="https://schema.org/Answer"
+        >
+          <p className="text-[14px] text-primary/70 leading-[1.7] pr-6" itemProp="text">{a}</p>
         </div>
       </div>
-    </button>
+    </div>
   );
 }
 
@@ -57,7 +68,11 @@ export default function FAQ() {
         </div>
 
         <InsetPanel>
-          <div className="bg-white rounded-[16px] overflow-hidden">
+          <div
+            className="bg-white rounded-[16px] overflow-hidden"
+            itemScope
+            itemType="https://schema.org/FAQPage"
+          >
             {FAQ_DATA.map((item, i) => (
               <AccordionItem key={i} index={i + 1} q={item.q} a={item.a} />
             ))}

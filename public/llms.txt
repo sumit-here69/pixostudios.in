@@ -1,0 +1,66 @@
+# Pixo Studios
+
+> Pixo Studios is a premium design and development studio based in India. We build high-converting websites, brand identities, e-commerce stores, and AI-powered digital products for ambitious businesses worldwide. Fast delivery, transparent pricing, no agency markup.
+
+## What We Do
+
+Pixo Studios offers end-to-end design and development services:
+
+- **Landing Page Websites** — Single or multi-page marketing websites, mobile responsive, SEO optimized with WhatsApp integration and contact forms. For D2C brands, startups, and local businesses.
+- **E-Commerce Websites** — Full shopping experience with cart, checkout, Razorpay/UPI payment integration, product management, and order tracking.
+- **Brand Identity** — Logo design, color palette, typography, brand guidelines document, and social media templates.
+- **UI/UX Design** — User research, wireframes, prototypes, high-fidelity Figma designs, and design system documentation for apps, dashboards, and SaaS.
+- **MVP Development** — Full-stack web applications with user auth, payments, admin panel, cloud deployment, and CI/CD setup.
+- **AI-Native Solutions** — Custom AI chatbots, workflow automation, and AI-powered features integrated into existing products.
+- **Product Redesign** — Complete UX audit, modern redesign with improved performance, and migration to a modern tech stack.
+
+## Pricing
+
+- **Starter** — ₹25,000 per project. 1 Landing Page Design, Basic Brand Guidelines, Mobile Responsive, 2 Revisions, 7-day delivery.
+- **Growth** — ₹75,000 per project. Multi-page Website, Brand Strategy Session, Web Animations, 4 Revisions, 14-day delivery.
+- Custom enterprise pricing available.
+
+## How We Work
+
+1. **Discovery** — Business & audience research, competitor analysis, scope definition, strategic roadmap.
+2. **Design** — Wireframes, prototypes, visual identity, feedback-driven iteration.
+3. **Development** — Next.js, React, Tailwind CSS. Clean, performant, responsive code.
+4. **Implementation** — Hosting, CI/CD, analytics, SEO, team training, documentation.
+5. **Launch & Support** — Zero-downtime deployment, real-time monitoring, ongoing maintenance.
+
+## Industries We Serve
+
+E-Commerce & D2C, SaaS & Technology, Food & Restaurants, Real Estate, Education, Healthcare & Wellness, Fashion & Beauty, Coaching & Services.
+
+## Technology Stack
+
+Next.js, React, Tailwind CSS, Figma, Framer, Claude AI, Cursor, Midjourney. Built at the speed of AI.
+
+## Contact
+
+- **Website:** https://pixostudios.in
+- **Email:** pixostudios.in@gmail.com
+- **Phone:** +91 63989 35305
+- **Book a call:** https://cal.com/pixo-studios/30min
+- **Instagram:** https://www.instagram.com/pixostudios.in
+- **LinkedIn:** https://www.linkedin.com/company/pixostudios
+
+## FAQ
+
+**How long does a typical project take?**
+A landing page takes 5-7 days. Full websites take 2-3 weeks. Product development runs 4-8 weeks.
+
+**Do you work with startups or only large brands?**
+Both. We love early-stage startups who need to move fast and look premium from day one.
+
+**What's included in your design packages?**
+Custom design (no templates), mobile responsiveness, SEO optimization, and post-launch support.
+
+**Do you provide development too?**
+Yes. Design, development, deployment — end-to-end. One studio, complete delivery.
+
+**How do we start a project?**
+Book a free 15-minute call. We discuss goals, timeline, budget. Proposal within 24 hours.
+
+**Can you help with ongoing updates after launch?**
+Every project includes 30 days of free support. Monthly retainers available for ongoing maintenance.

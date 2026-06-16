@@ -79,14 +79,14 @@ export default function Footer() {
 
             <div>
               <h4 className="text-[13px] font-semibold uppercase tracking-wider text-primary mb-4">Get in Touch</h4>
-              <ul className="space-y-2.5">
-                <li>
+              <address className="not-italic space-y-2.5">
+                <p>
                   <a href={`tel:${STUDIO_PHONE.replace(/\s/g, "")}`} className="text-[14px] sm:text-[15px] text-secondary hover:text-accent transition-colors">{STUDIO_PHONE}</a>
-                </li>
-                <li>
+                </p>
+                <p>
                   <a href={`mailto:${STUDIO_EMAIL}`} className="text-[13px] sm:text-[15px] text-secondary hover:text-accent transition-colors break-all">{STUDIO_EMAIL}</a>
-                </li>
-              </ul>
+                </p>
+              </address>
 
               {/* Follow Us — inside column on desktop only */}
               <div className="hidden md:block mt-6">
